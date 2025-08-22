@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://yoursite.com/sitemap.xml
+Sitemap: https://gaesan.shop/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

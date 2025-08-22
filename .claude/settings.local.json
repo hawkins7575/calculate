@@ -14,7 +14,8 @@
       "Bash(claude setup-token)",
       "Bash(superclaude --help)",
       "Bash(superclaude --version)",
-      "Bash(superclaude --interactive)"
+      "Bash(superclaude --interactive)",
+      "Bash(npx vercel:*)"
     ],
     "deny": [],
     "ask": []
