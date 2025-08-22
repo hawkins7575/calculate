@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:github.com)",
+      "Bash(npm install:*)",
+      "Bash(claude --version)",
+      "Bash(git config:*)",
+      "Bash(superclaude --verify)",
+      "Bash(claude)",
+      "Bash(gh auth:*)",
+      "Bash(winget install:*)",
+      "Bash(claude config)",
+      "Bash(claude config list)",
+      "Bash(claude setup-token)",
+      "Bash(superclaude --help)",
+      "Bash(superclaude --version)",
+      "Bash(superclaude --interactive)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,3 +1,20 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all calculators
+Allow: /calculator/*
+Allow: /guide/*
+
+# Block any admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Block any temporary or development files
+Disallow: /*.tmp$
+Disallow: /*.temp$
