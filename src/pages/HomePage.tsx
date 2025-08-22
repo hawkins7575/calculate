@@ -7,6 +7,7 @@ import HomeIcon from '../icons/HomeIcon';
 import BmiIcon from '../icons/BmiIcon';
 import SalaryIcon from '../icons/SalaryIcon';
 import FAQ from '../components/FAQ';
+import BlogSection from '../components/BlogSection';
 
 const HomePage = () => {
   useEffect(() => {
@@ -229,6 +230,9 @@ const HomePage = () => {
           </Col>
         </Row>
       </Container>
+
+      {/* 블로그 섹션 */}
+      <BlogSection />
     </>
   );
 };

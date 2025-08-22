@@ -1,15 +1,39 @@
 User-agent: *
 Allow: /
 
+# 우선순위 높은 페이지
+Allow: /compound-interest
+Allow: /real-estate  
+Allow: /bmi
+Allow: /salary
+Allow: /guide
+
+# SEO 전용 랜딩 페이지
+Allow: /compound-calculator
+Allow: /real-estate-calculator
+Allow: /bmi-calculator
+Allow: /salary-calculator
+
+# 중요도 낮은 페이지
+Allow: /privacy
+Allow: /terms
+Allow: /about
+Allow: /contact
+Allow: /sitemap
+
 # Sitemap location
 Sitemap: https://gaesan.shop/sitemap.xml
 
-# Crawl-delay for respectful crawling
+# 크롤링 속도 조절 (서버 부하 방지)
 Crawl-delay: 1
 
-# Allow all calculators
-Allow: /calculator/*
-Allow: /guide/*
+# 구글봇 우선 크롤링 허용
+User-agent: Googlebot
+Crawl-delay: 0
+
+# 네이버 검색봇 크롤링 허용
+User-agent: Yeti
+Allow: /
 
 # Block any admin or private areas (if any)
 Disallow: /admin/
