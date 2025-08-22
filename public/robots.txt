@@ -27,9 +27,13 @@ Sitemap: https://gaesan.shop/sitemap.xml
 # 크롤링 속도 조절 (서버 부하 방지)
 Crawl-delay: 1
 
-# 구글봇 우선 크롤링 허용
+# 구글봇 우선 크롤링 허용 (애드센스 포함)
 User-agent: Googlebot
 Crawl-delay: 0
+
+# 구글 애드센스 크롤러 허용
+User-agent: Mediapartners-Google
+Allow: /
 
 # 네이버 검색봇 크롤링 허용
 User-agent: Yeti

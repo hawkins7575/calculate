@@ -21,7 +21,8 @@
       "Bash(start create_favicon.html)",
       "Bash(python:*)",
       "Bash(pip install:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
