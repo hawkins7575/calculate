@@ -20,7 +20,8 @@
       "Bash(git add:*)",
       "Bash(start create_favicon.html)",
       "Bash(python:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

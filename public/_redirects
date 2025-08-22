@@ -1,0 +1,18 @@
+# Netlify-style redirects (Vercel also supports this)
+/*    /index.html   200
+
+# Specific calculator pages
+/compound-interest    /index.html   200
+/real-estate         /index.html   200
+/bmi                 /index.html   200
+/salary              /index.html   200
+/compound-calculator /index.html   200
+/real-estate-calculator /index.html   200
+/bmi-calculator      /index.html   200
+/salary-calculator   /index.html   200
+/guide              /index.html   200
+/privacy            /index.html   200
+/terms              /index.html   200
+/about              /index.html   200
+/contact            /index.html   200
+/sitemap            /index.html   200
