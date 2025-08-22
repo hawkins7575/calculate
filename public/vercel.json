@@ -41,7 +41,7 @@
       "destination": "/static/$1"
     },
     {
-      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$)",
+      "source": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|txt|xml)$)",
       "destination": "/$1"
     },
     {
