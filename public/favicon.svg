@@ -1,0 +1,50 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .calc-body { fill: #81a4cd; }
+      .calc-screen { fill: #2c3e50; }
+      .calc-button { fill: #b3c9e1; }
+      .calc-equals { fill: #e74c3c; }
+      .calc-text { fill: #00ff00; font-family: monospace; font-size: 4px; }
+    </style>
+  </defs>
+  
+  <!-- 계산기 본체 -->
+  <rect x="4" y="2" width="24" height="28" rx="4" ry="4" class="calc-body"/>
+  
+  <!-- 화면 -->
+  <rect x="6" y="5" width="20" height="6" rx="2" ry="2" class="calc-screen"/>
+  
+  <!-- 화면 텍스트 -->
+  <text x="24" y="9" text-anchor="end" class="calc-text">123.45</text>
+  
+  <!-- 버튼들 (4행 x 3열) -->
+  <!-- 1행 -->
+  <rect x="7" y="14" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="12" y="14" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="17" y="14" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="22" y="14" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  
+  <!-- 2행 -->
+  <rect x="7" y="17.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="12" y="17.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="17" y="17.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="22" y="17.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  
+  <!-- 3행 -->
+  <rect x="7" y="21" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="12" y="21" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="17" y="21" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="22" y="21" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  
+  <!-- 4행 -->
+  <rect x="7" y="24.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="12" y="24.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  <rect x="17" y="24.5" width="3.5" height="2.5" rx="0.5" class="calc-button"/>
+  
+  <!-- = 버튼 (빨간색) -->
+  <rect x="22" y="24.5" width="3.5" height="2.5" rx="0.5" class="calc-equals"/>
+  
+  <!-- 그림자 효과 -->
+  <rect x="4.5" y="2.5" width="24" height="28" rx="4" ry="4" fill="none" stroke="rgba(0,0,0,0.1)" stroke-width="0.5"/>
+</svg>

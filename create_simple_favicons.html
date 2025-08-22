@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>가계산 파비콘 간편 생성기</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        canvas { border: 2px solid #ddd; margin: 10px; border-radius: 5px; }
+        .size-group { margin: 20px 0; padding: 15px; background: #f9f9f9; border-radius: 5px; }
+        button { background: #81a4cd; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
+        button:hover { background: #6b8db5; }
+        .download-all { background: #e74c3c; font-size: 16px; padding: 15px 30px; }
+        .preview { display: flex; align-items: center; gap: 10px; }
+        .info { color: #666; font-size: 14px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧮 가계산 파비콘 생성기</h1>
+        <p>계산기 모양의 파비콘을 자동으로 생성합니다. 각 크기별로 다운로드하거나 전체 다운로드를 이용하세요.</p>
+        
+        <div class="size-group">
+            <h3>📱 16x16 파비콘 (기본)</h3>
+            <div class="preview">
+                <canvas id="favicon16" width="16" height="16"></canvas>
+                <button onclick="download('favicon16', 'favicon-16x16.png')">다운로드</button>
+                <span class="info">가장 작은 브라우저 탭용 파비콘</span>
+            </div>
+        </div>
+        
+        <div class="size-group">
+            <h3>🖥️ 32x32 파비콘 (표준)</h3>
+            <div class="preview">
+                <canvas id="favicon32" width="32" height="32"></canvas>
+                <button onclick="download('favicon32', 'favicon-32x32.png')">다운로드</button>
+                <span class="info">데스크톱 브라우저용 표준 파비콘</span>
+            </div>
+        </div>
+        
+        <div class="size-group">
+            <h3>📲 192x192 PWA 아이콘</h3>
+            <div class="preview">
+                <canvas id="logo192" width="192" height="192"></canvas>
+                <button onclick="download('logo192', 'logo192.png')">다운로드</button>
+                <span class="info">모바일 홈화면 추가용 아이콘</span>
+            </div>
+        </div>
+        
+        <div class="size-group">
+            <h3>🚀 512x512 PWA 아이콘 (고해상도)</h3>
+            <div class="preview">
+                <canvas id="logo512" width="512" height="512"></canvas>
+                <button onclick="download('logo512', 'logo512.png')">다운로드</button>
+                <span class="info">고해상도 디스플레이용 큰 아이콘</span>
+            </div>
+        </div>
+
+        <div class="size-group">
+            <h3>🍎 180x180 Apple Touch Icon</h3>
+            <div class="preview">
+                <canvas id="apple180" width="180" height="180"></canvas>
+                <button onclick="download('apple180', 'apple-touch-icon.png')">다운로드</button>
+                <span class="info">iOS Safari 홈화면용 아이콘</span>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <button class="download-all" onclick="downloadAll()">🎁 모든 파비콘 한번에 다운로드</button>
+        </div>
+        
+        <div class="info">
+            <h4>📋 사용 방법:</h4>
+            <ol>
+                <li>위의 "모든 파비콘 한번에 다운로드" 버튼을 클릭하세요</li>
+                <li>다운로드된 파일들을 프로젝트의 <code>public/</code> 폴더에 복사하세요</li>
+                <li>기존 파비콘 파일들을 새 파일로 교체하세요</li>
+                <li>사이트를 다시 빌드하고 배포하세요</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // 계산기 아이콘을 그리는 함수
+        function drawCalculator(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            const scale = size / 32; // 32px 기준으로 스케일링
+            
+            // 배경 초기화
+            ctx.clearRect(0, 0, size, size);
+            
+            // 가계산 브랜드 컬러
+            const primaryColor = '#81a4cd';
+            const screenColor = '#2c3e50';
+            const buttonColor = '#b3c9e1';
+            const equalsColor = '#e74c3c';
+            const textColor = '#00ff41';
+            
+            // 계산기 본체 (둥근 모서리)
+            ctx.fillStyle = primaryColor;
+            ctx.beginPath();
+            roundRect(ctx, 4*scale, 2*scale, 24*scale, 28*scale, 4*scale);
+            ctx.fill();
+            
+            // 화면 영역
+            ctx.fillStyle = screenColor;
+            ctx.beginPath();
+            roundRect(ctx, 6*scale, 5*scale, 20*scale, 6*scale, 2*scale);
+            ctx.fill();
+            
+            // 화면 텍스트 (숫자 표시)
+            if (size >= 32) {
+                ctx.fillStyle = textColor;
+                ctx.font = `${Math.max(3, 4*scale)}px monospace`;
+                ctx.textAlign = 'right';
+                ctx.fillText('123', 24*scale, 9*scale);
+            }
+            
+            // 버튼들 그리기
+            ctx.fillStyle = buttonColor;
+            
+            // 버튼 위치 정의 (4행 x 4열)
+            const buttonSize = 3.5 * scale;
+            const buttonHeight = 2.5 * scale;
+            const spacing = 5 * scale;
+            
+            for (let row = 0; row < 4; row++) {
+                for (let col = 0; col < 4; col++) {
+                    const x = 7*scale + col * spacing;
+                    const y = 14*scale + row * 3.5*scale;
+                    
+                    // = 버튼은 빨간색으로
+                    if (row === 3 && col === 3) {
+                        ctx.fillStyle = equalsColor;
+                    } else {
+                        ctx.fillStyle = buttonColor;
+                    }
+                    
+                    ctx.beginPath();
+                    roundRect(ctx, x, y, buttonSize, buttonHeight, 0.5*scale);
+                    ctx.fill();
+                }
+            }
+            
+            // 미세한 그림자 효과
+            ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            roundRect(ctx, 4.2*scale, 2.2*scale, 24*scale, 28*scale, 4*scale);
+            ctx.stroke();
+        }
+        
+        // 둥근 모서리 사각형 함수
+        function roundRect(ctx, x, y, width, height, radius) {
+            ctx.moveTo(x + radius, y);
+            ctx.lineTo(x + width - radius, y);
+            ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+            ctx.lineTo(x + width, y + height - radius);
+            ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+            ctx.lineTo(x + radius, y + height);
+            ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+            ctx.lineTo(x, y + radius);
+            ctx.quadraticCurveTo(x, y, x + radius, y);
+            ctx.closePath();
+        }
+        
+        // 페이지 로드 시 모든 파비콘 생성
+        window.onload = function() {
+            drawCalculator(document.getElementById('favicon16'), 16);
+            drawCalculator(document.getElementById('favicon32'), 32);
+            drawCalculator(document.getElementById('logo192'), 192);
+            drawCalculator(document.getElementById('logo512'), 512);
+            drawCalculator(document.getElementById('apple180'), 180);
+        };
+        
+        // 다운로드 함수
+        function download(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // 모든 파비콘 다운로드
+        function downloadAll() {
+            const files = [
+                ['favicon16', 'favicon-16x16.png'],
+                ['favicon32', 'favicon-32x32.png'],
+                ['logo192', 'logo192.png'],
+                ['logo512', 'logo512.png'],
+                ['apple180', 'apple-touch-icon.png']
+            ];
+            
+            files.forEach(([canvasId, filename], index) => {
+                setTimeout(() => {
+                    download(canvasId, filename);
+                }, index * 300); // 300ms 간격으로 다운로드
+            });
+            
+            alert('🎉 모든 파비콘 다운로드가 시작되었습니다!\n\n파일들을 public/ 폴더에 복사한 후 사이트를 다시 빌드해주세요.');
+        }
+    </script>
+</body>
+</html>
