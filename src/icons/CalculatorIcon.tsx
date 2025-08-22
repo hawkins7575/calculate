@@ -1,6 +1,10 @@
 import React from 'react';
 
-const CalculatorIcon = (props: React.SVGProps<SVGSVGElement>) => (
+interface CalculatorIconProps extends React.SVGProps<SVGSVGElement> {
+  alt?: string;
+}
+
+const CalculatorIcon = ({ alt, ...props }: CalculatorIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
@@ -12,6 +16,8 @@ const CalculatorIcon = (props: React.SVGProps<SVGSVGElement>) => (
     strokeLinecap="round"
     strokeLinejoin="round"
     {...props}
+    role="img"
+    aria-label={alt}
   >
     <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
     <line x1="8" y1="6" x2="16" y2="6"></line>
