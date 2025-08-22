@@ -8,6 +8,7 @@ import RealEstatePage from './pages/RealEstatePage';
 import BmiPage from './pages/BmiPage';
 import SalaryPage from './pages/SalaryPage';
 import BlogPageRoute from './pages/BlogPage';
+import { CompoundInterestLanding, RealEstateLanding, BmiLanding, SalaryLanding } from './pages/LandingPages';
 import PrivacyPolicy from './PrivacyPolicy';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
@@ -87,6 +88,13 @@ function App() {
           <Route path="/bmi" element={<BmiPage />} />
           <Route path="/salary" element={<SalaryPage />} />
           <Route path="/guide" element={<BlogPageRoute />} />
+          
+          {/* SEO 전용 랜딩 페이지들 */}
+          <Route path="/compound-calculator" element={<CompoundInterestLanding />} />
+          <Route path="/real-estate-calculator" element={<RealEstateLanding />} />
+          <Route path="/bmi-calculator" element={<BmiLanding />} />
+          <Route path="/salary-calculator" element={<SalaryLanding />} />
+          
           <Route path="/privacy" element={<PrivacyPolicy onBack={() => window.history.back()} />} />
           <Route path="/terms" element={<TermsOfService onBack={() => window.history.back()} />} />
           <Route path="/about" element={<AboutUs onBack={() => window.history.back()} />} />
