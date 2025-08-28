@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import SalaryCalculator from '../SalaryCalculator';
+import ChildcareCalculator from '../ChildcareCalculator';
 
-const SalaryPage = () => {
+const ChildcarePage = () => {
   useEffect(() => {
-    document.title = '실급여 계산기 - 4대보험 공제 후 실수령액 계산 | 가계산';
+    document.title = '육아비용 계산기 - 자녀 양육비 예산 계획 | 가계산';
   }, []);
 
   return (
     <>
       
       <Container className="mt-4 mb-4" style={{ flex: '1', maxWidth: '1200px' }}>
-        <SalaryCalculator />
+        <ChildcareCalculator />
       </Container>
     </>
   );
 };
 
-export default SalaryPage;
+export default ChildcarePage;

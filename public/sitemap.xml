@@ -3,115 +3,229 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- 메인 페이지 -->
+  
+  <!-- 홈페이지 -->
   <url>
     <loc>https://gaesan.shop/</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- 계산기 메인 페이지들 -->
+  
+  <!-- 핵심 계산기 페이지들 (높은 우선순위) -->
   <url>
     <loc>https://gaesan.shop/compound-interest</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  
   <url>
     <loc>https://gaesan.shop/real-estate</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  
   <url>
     <loc>https://gaesan.shop/bmi</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  
   <url>
     <loc>https://gaesan.shop/salary</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- SEO 전용 랜딩 페이지들 -->
+  
+  <url>
+    <loc>https://gaesan.shop/retirement</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/loan</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/inheritance-tax</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/childcare</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/savings</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- SEO 최적화 랜딩 페이지들 -->
   <url>
     <loc>https://gaesan.shop/compound-calculator</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
   <url>
     <loc>https://gaesan.shop/real-estate-calculator</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
   <url>
     <loc>https://gaesan.shop/bmi-calculator</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  
   <url>
     <loc>https://gaesan.shop/salary-calculator</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- 활용 가이드 -->
+  
+  <!-- 블로그 메인 페이지 -->
   <url>
-    <loc>https://gaesan.shop/guide</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://gaesan.shop/blog</loc>
+    <lastmod>2024-08-28</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- 정책 페이지들 -->
+  
+  <!-- 블로그 가이드 페이지들 -->
   <url>
-    <loc>https://gaesan.shop/privacy</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://gaesan.shop/terms</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://gaesan.shop/about</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://gaesan.shop/contact</loc>
-    <lastmod>2024-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://gaesan.shop/sitemap</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://gaesan.shop/blog/compound-interest-guide</loc>
+    <lastmod>2024-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  
+  <url>
+    <loc>https://gaesan.shop/blog/real-estate-commission-save</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/bmi-asian-standard</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/salary-calculation-guide</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/retirement-planning</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/loan-early-payment</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/inheritance-tax-guide</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/savings-strategy-guide</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/childcare-guide</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/blog/investment-strategy-guide</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- 가이드 페이지 (블로그와 동일한 콘텐츠) -->
+  <url>
+    <loc>https://gaesan.shop/guide</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- 법적 페이지들 -->
+  <url>
+    <loc>https://gaesan.shop/privacy</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/terms</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/about</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/contact</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://gaesan.shop/sitemap</loc>
+    <lastmod>2024-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
 </urlset>

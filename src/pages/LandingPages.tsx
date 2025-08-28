@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 
 // 복리 계산기 랜딩 페이지
 export const CompoundInterestLanding = () => {
@@ -11,21 +10,6 @@ export const CompoundInterestLanding = () => {
 
   return (
     <>
-      <Helmet>
-        <title>복리 계산기 온라인 - 투자 수익률 시뮬레이션 | 가계산</title>
-        <meta 
-          name="description" 
-          content="무료 복리 계산기로 투자 수익률을 시뮬레이션하세요. 원금, 이자율, 기간별 복리 효과를 계산하고 장기 투자 전략을 세워보세요. 매월 적립식 투자도 계산 가능합니다." 
-        />
-        <meta 
-          name="keywords" 
-          content="복리 계산기, 투자 수익률 계산기, 복리 효과, 장기 투자, 적립식 투자, 재테크 계산기, 투자 시뮬레이션" 
-        />
-        <link rel="canonical" href="https://gaesan.shop/compound-calculator" />
-        <meta property="og:title" content="복리 계산기 온라인 - 투자 수익률 시뮬레이션" />
-        <meta property="og:description" content="무료 복리 계산기로 투자의 마법인 복리 효과를 체험해보세요. 장기 투자 전략 수립에 필수 도구입니다." />
-        <meta property="og:url" content="https://gaesan.shop/compound-calculator" />
-      </Helmet>
       
       <Container className="mt-4 mb-4" style={{ flex: '1' }}>
         <Row>
@@ -108,21 +92,6 @@ export const RealEstateLanding = () => {
 
   return (
     <>
-      <Helmet>
-        <title>부동산 중개보수 계산기 - 법정 요율 기준 수수료 계산 | 가계산</title>
-        <meta 
-          name="description" 
-          content="부동산 거래 시 중개보수를 법정 상한요율 기준으로 정확히 계산하세요. 매매, 임대차별 수수료율과 절약 방법을 제공합니다. 과도한 중개보수 요구로부터 보호받으세요." 
-        />
-        <meta 
-          name="keywords" 
-          content="부동산 중개보수 계산기, 중개수수료, 부동산 수수료, 법정 요율, 중개보수 절약, 부동산 거래 비용" 
-        />
-        <link rel="canonical" href="https://gaesan.shop/real-estate-calculator" />
-        <meta property="og:title" content="부동산 중개보수 계산기 - 법정 요율 기준 수수료 계산" />
-        <meta property="og:description" content="부동산 거래 시 정확한 중개보수를 계산하고 과도한 수수료 요구로부터 보호받으세요." />
-        <meta property="og:url" content="https://gaesan.shop/real-estate-calculator" />
-      </Helmet>
       
       <Container className="mt-4 mb-4" style={{ flex: '1' }}>
         <Row>
@@ -205,21 +174,6 @@ export const BmiLanding = () => {
 
   return (
     <>
-      <Helmet>
-        <title>BMI 계산기 - 체질량지수 측정 및 건강상태 진단 | 가계산</title>
-        <meta 
-          name="description" 
-          content="무료 BMI 계산기로 체질량지수를 측정하고 건강상태를 진단하세요. 아시아인 기준 BMI 분류와 체중관리 가이드를 제공합니다. 키와 몸무게만 입력하면 즉시 결과 확인 가능합니다." 
-        />
-        <meta 
-          name="keywords" 
-          content="BMI 계산기, 체질량지수, 비만도 측정, 체중 계산기, 건강 진단, 다이어트 계산기, 표준체중" 
-        />
-        <link rel="canonical" href="https://gaesan.shop/bmi-calculator" />
-        <meta property="og:title" content="BMI 계산기 - 체질량지수 측정 및 건강상태 진단" />
-        <meta property="og:description" content="무료 BMI 계산기로 체질량지수를 측정하고 아시아인 기준으로 건강상태를 확인하세요." />
-        <meta property="og:url" content="https://gaesan.shop/bmi-calculator" />
-      </Helmet>
       
       <Container className="mt-4 mb-4" style={{ flex: '1' }}>
         <Row>
@@ -302,21 +256,6 @@ export const SalaryLanding = () => {
 
   return (
     <>
-      <Helmet>
-        <title>실급여 계산기 - 4대보험 공제 후 실수령액 계산 | 가계산</title>
-        <meta 
-          name="description" 
-          content="실급여 계산기로 4대보험(국민연금, 건강보험, 고용보험, 산재보험)과 세금 공제 후 실제 수령액을 계산하세요. 연말정산 절세 방법과 급여 최적화 가이드를 제공합니다." 
-        />
-        <meta 
-          name="keywords" 
-          content="실급여 계산기, 급여 계산기, 4대보험 공제, 세금 계산, 실수령액, 연말정산, 소득세 계산기" 
-        />
-        <link rel="canonical" href="https://gaesan.shop/salary-calculator" />
-        <meta property="og:title" content="실급여 계산기 - 4대보험 공제 후 실수령액 계산" />
-        <meta property="og:description" content="정확한 실급여 계산으로 실제 수령액을 미리 확인하고 절세 방법을 알아보세요." />
-        <meta property="og:url" content="https://gaesan.shop/salary-calculator" />
-      </Helmet>
       
       <Container className="mt-4 mb-4" style={{ flex: '1' }}>
         <Row>

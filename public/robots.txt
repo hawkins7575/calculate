@@ -1,48 +1,79 @@
 User-agent: *
 Allow: /
 
-# 우선순위 높은 페이지
+# 핵심 계산기 페이지 (높은 우선순위)
 Allow: /compound-interest
-Allow: /real-estate  
+Allow: /real-estate
 Allow: /bmi
 Allow: /salary
-Allow: /guide
+Allow: /retirement
+Allow: /loan
+Allow: /inheritance-tax
+Allow: /childcare
+Allow: /savings
 
-# SEO 전용 랜딩 페이지
+# SEO 최적화 랜딩 페이지
 Allow: /compound-calculator
 Allow: /real-estate-calculator
 Allow: /bmi-calculator
 Allow: /salary-calculator
 
-# 중요도 낮은 페이지
+# 블로그 및 가이드 콘텐츠
+Allow: /blog
+Allow: /blog/*
+Allow: /guide
+
+# 법적 페이지
 Allow: /privacy
 Allow: /terms
 Allow: /about
 Allow: /contact
 Allow: /sitemap
 
-# Sitemap location
+# 사이트맵 위치
 Sitemap: https://gaesan.shop/sitemap.xml
 
-# 크롤링 속도 조절 (서버 부하 방지)
+# 일반 검색봇 크롤링 속도 조절
 Crawl-delay: 1
 
-# 구글봇 우선 크롤링 허용 (애드센스 포함)
+# Google 검색봇 최적화
 User-agent: Googlebot
+Allow: /
 Crawl-delay: 0
 
-# 구글 애드센스 크롤러 허용
+# Google AdSense 봇 허용
 User-agent: Mediapartners-Google
 Allow: /
+Crawl-delay: 0
 
-# 네이버 검색봇 크롤링 허용
-User-agent: Yeti
+# Google 이미지 봇 허용
+User-agent: Googlebot-Image
 Allow: /
 
-# Block any admin or private areas (if any)
+# 네이버 검색봇 허용
+User-agent: Yeti
+Allow: /
+Crawl-delay: 1
+
+# 다음/카카오 검색봇 허용
+User-agent: Daumoa
+Allow: /
+
+# Bing 검색봇 허용
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# 차단할 영역
 Disallow: /admin/
 Disallow: /private/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /build/
+Disallow: /src/
 
-# Block any temporary or development files
+# 임시 파일 차단
 Disallow: /*.tmp$
 Disallow: /*.temp$
+Disallow: /*.log$
+Disallow: /*.bak$

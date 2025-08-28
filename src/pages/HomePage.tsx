@@ -1,45 +1,17 @@
 import React, { useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import CalculatorIcon from '../icons/CalculatorIcon';
 import HomeIcon from '../icons/HomeIcon';
 import BmiIcon from '../icons/BmiIcon';
 import SalaryIcon from '../icons/SalaryIcon';
-import FAQ from '../components/FAQ';
-import BlogSection from '../components/BlogSection';
+import SocialShare from '../components/SocialShare';
 
 const HomePage = () => {
   useEffect(() => {
     document.title = '가계산 - 복리, 부동산, BMI, 급여 계산기 모음 | 무료 온라인 계산기';
   }, []);
 
-  const faqItems = [
-    {
-      question: "가계산의 모든 계산기는 무료인가요?",
-      answer: "네, 가계산의 모든 계산기는 완전 무료로 제공됩니다. 회원가입이나 결제 없이 누구나 자유롭게 이용할 수 있습니다."
-    },
-    {
-      question: "계산 결과가 정확한가요?",
-      answer: "가계산은 공식적인 법령과 최신 세율, 보험료율을 적용하여 정확한 계산 결과를 제공합니다.\n복리 계산기는 수학적 복리 공식을, 부동산 중개보수는 공인중개사법 상한요율을, BMI는 WHO 기준을, 실급여는 국세청 기준을 적용합니다."
-    },
-    {
-      question: "모바일에서도 사용할 수 있나요?",
-      answer: "네, 가계산은 모바일, 태블릿, 데스크톱 등 모든 기기에서 최적화되어 작동합니다.\n반응형 디자인으로 어떤 화면 크기에서도 편리하게 이용하실 수 있습니다."
-    },
-    {
-      question: "개인정보가 수집되나요?",
-      answer: "가계산은 개인정보를 일체 수집하지 않습니다.\n모든 계산은 브라우저에서 실시간으로 처리되며, 입력한 데이터는 서버에 저장되지 않습니다."
-    },
-    {
-      question: "계산 결과를 저장하거나 인쇄할 수 있나요?",
-      answer: "각 계산기에서 제공하는 결과 화면을 브라우저의 인쇄 기능을 통해 PDF로 저장하거나 프린터로 출력할 수 있습니다.\n스크린샷을 찍어 저장하는 방법도 가능합니다."
-    },
-    {
-      question: "새로운 기능 요청이나 문의사항이 있다면?",
-      answer: "문의사항이나 새로운 기능 제안은 하단의 '문의하기' 페이지를 통해 연락 주시거나,\n깃허브 리포지토리에 이슈로 등록해 주시면 검토 후 반영하겠습니다."
-    }
-  ];
 
   const calculators = [
     {
@@ -69,170 +41,193 @@ const HomePage = () => {
       icon: <SalaryIcon className="nav-icon" alt="실급여 계산기 아이콘" />,
       link: '/salary',
       keywords: '급여, 실수령액, 세금'
+    },
+    {
+      title: '퇴직금 계산기',
+      description: '근로기준법에 따른 퇴직금을 정확하게 계산해보세요',
+      icon: <CalculatorIcon className="nav-icon" alt="퇴직금 계산기 아이콘" />,
+      link: '/retirement',
+      keywords: '퇴직금, 근속, 평균임금'
+    },
+    {
+      title: '대출이자 계산기',
+      description: '대출 조건에 따른 월 상환액과 총 이자를 계산해보세요',
+      icon: <CalculatorIcon className="nav-icon" alt="대출이자 계산기 아이콘" />,
+      link: '/loan',
+      keywords: '대출, 이자, 상환액'
+    },
+    {
+      title: '상속세 증여세 계산기',
+      description: '상속세와 증여세를 미리 계산하여 절세 계획을 세워보세요',
+      icon: <CalculatorIcon className="nav-icon" alt="상속세 증여세 계산기 아이콘" />,
+      link: '/inheritance-tax',
+      keywords: '상속세, 증여세, 세금'
+    },
+    {
+      title: '육아비용 계산기',
+      description: '자녀의 나이와 교육 환경에 따른 월별/연간 육아비용을 계산해보세요',
+      icon: <CalculatorIcon className="nav-icon" alt="육아비용 계산기 아이콘" />,
+      link: '/childcare',
+      keywords: '육아비용, 교육비, 자녀'
+    },
+    {
+      title: '적금 예금 계산기',
+      description: '적금과 예금의 만기 수익을 계산하여 최적의 저축 계획을 세워보세요',
+      icon: <CalculatorIcon className="nav-icon" alt="적금 예금 계산기 아이콘" />,
+      link: '/savings',
+      keywords: '적금, 예금, 저축'
     }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>가계산 - 복리, 부동산, BMI, 급여 계산기 모음 | 무료 온라인 계산기</title>
-        <meta 
-          name="description" 
-          content="복리 계산기, 부동산 중개보수 계산기, BMI 계산기, 실급여 계산기 등 실생활에 필요한 다양한 계산기를 무료로 제공합니다. 정확한 계산과 상세한 가이드로 합리적인 의사결정을 도와드립니다." 
-        />
-        <meta 
-          name="keywords" 
-          content="계산기 모음, 복리 계산기, 부동산 중개보수 계산기, BMI 계산기, 실급여 계산기, 온라인 계산기, 무료 계산기, 가계산" 
-        />
-        <link rel="canonical" href="https://gaesan.shop" />
-        <meta property="og:title" content="가계산 - 복리, 부동산, BMI, 급여 계산기 모음" />
-        <meta property="og:description" content="실생활에 필요한 다양한 계산기를 무료로 제공합니다. 복리 효과 계산부터 부동산 중개보수, BMI 지수, 실급여까지 한번에!" />
-        <meta property="og:url" content="https://gaesan.shop" />
-      </Helmet>
       
-      <Container className="mt-4 mb-4" style={{ flex: '1' }}>
+      <Container className="mt-5 mb-5" style={{ flex: '1', maxWidth: '900px' }}>
         <div className="text-center mb-5">
-          <h1 className="text-gradient mb-4">가계산 - 실생활 계산기 모음</h1>
-          <p className="lead text-muted">
-            복리 투자부터 부동산 거래, 건강관리, 급여 계산까지<br/>
-            정확한 계산과 실용적인 가이드를 한번에 만나보세요
+          <h1 className="mb-4" style={{ 
+            fontSize: '2.5rem', 
+            fontWeight: '300', 
+            color: '#2c3e50',
+            letterSpacing: '-0.02em'
+          }}>
+            가계산
+          </h1>
+          <p style={{ 
+            fontSize: '1.1rem', 
+            color: '#5a6c7d', 
+            lineHeight: '1.6', 
+            marginBottom: '0',
+            maxWidth: '500px',
+            margin: '0 auto'
+          }}>
+            실생활에 필요한 계산기를 한 곳에서
+            <br />
+            <span style={{ color: '#7f8c8d' }}>간편하고 정확하게</span>
           </p>
         </div>
 
-        <nav className="mb-4" aria-label="관련 계산기 바로가기">
-          <Row className="text-center">
-            <Col md={3}>
-              <Link to="/compound-calculator" className="text-decoration-none">
-                <small className="text-primary">복리 계산기 상세가이드 →</small>
-              </Link>
-            </Col>
-            <Col md={3}>
-              <Link to="/real-estate-calculator" className="text-decoration-none">
-                <small className="text-primary">부동산 수수료 가이드 →</small>
-              </Link>
-            </Col>
-            <Col md={3}>
-              <Link to="/bmi-calculator" className="text-decoration-none">
-                <small className="text-primary">BMI 건강 가이드 →</small>
-              </Link>
-            </Col>
-            <Col md={3}>
-              <Link to="/salary-calculator" className="text-decoration-none">
-                <small className="text-primary">급여 절세 가이드 →</small>
-              </Link>
-            </Col>
-          </Row>
-        </nav>
-
-        <Row>
+        <Row className="justify-content-center g-4">
           {calculators.map((calc, index) => (
-            <Col lg={6} md={6} key={index} className="mb-4">
-              <Card className="h-100 shadow-soft">
-                <Card.Body className="d-flex flex-column">
+            <Col lg={4} md={6} key={index}>
+              <Card 
+                className="h-100 border-0" 
+                style={{ 
+                  borderRadius: '16px',
+                  transition: 'all 0.3s ease',
+                  background: 'linear-gradient(135deg, #fff 0%, #f8f9fa 100%)',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.12)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0px)';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
+                }}
+              >
+                <Card.Body className="d-flex flex-column p-4">
                   <div className="d-flex align-items-center mb-3">
-                    {calc.icon}
-                    <Card.Title className="h5 mb-0 ms-2">{calc.title}</Card.Title>
+                    <div 
+                      style={{ 
+                        background: 'linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)',
+                        borderRadius: '12px',
+                        padding: '8px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginRight: '12px'
+                      }}
+                    >
+                      <div style={{ transform: 'scale(0.8)', color: 'white' }}>
+                        {calc.icon}
+                      </div>
+                    </div>
+                    <Card.Title 
+                      className="mb-0" 
+                      style={{ 
+                        fontSize: '1.1rem', 
+                        fontWeight: '600',
+                        color: '#2c3e50'
+                      }}
+                    >
+                      {calc.title}
+                    </Card.Title>
                   </div>
-                  <Card.Text className="flex-grow-1 text-muted">
+                  <Card.Text 
+                    className="flex-grow-1 mb-4" 
+                    style={{ 
+                      fontSize: '0.9rem', 
+                      lineHeight: '1.5',
+                      color: '#6c757d'
+                    }}
+                  >
                     {calc.description}
                   </Card.Text>
-                  <div className="mt-auto">
-                    <div className="mb-2">
-                      <small className="text-primary">🏷️ {calc.keywords}</small>
-                    </div>
-                    <Link to={calc.link} className="btn btn-primary w-100">
-                      계산하기
-                    </Link>
-                  </div>
+                  <Link 
+                    to={calc.link} 
+                    className="btn"
+                    style={{ 
+                      fontSize: '0.9rem', 
+                      padding: '10px 20px',
+                      borderRadius: '8px',
+                      background: 'linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)',
+                      border: 'none',
+                      color: 'white',
+                      fontWeight: '500',
+                      textDecoration: 'none',
+                      display: 'block',
+                      textAlign: 'center',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.02)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #55a3ff 0%, #0770c1 100%)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.background = 'linear-gradient(135deg, #74b9ff 0%, #0984e3 100%)';
+                    }}
+                  >
+                    계산하기
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
 
-        <Row className="mt-5">
-          <Col>
-            <Card>
-              <Card.Header as="h2">🚀 가계산의 특징</Card.Header>
-              <Card.Body>
-                <Row>
-                  <Col md={6}>
-                    <h3>✅ 정확한 계산</h3>
-                    <p>최신 법령과 정확한 공식을 적용하여 신뢰할 수 있는 계산 결과를 제공합니다.</p>
-                    
-                    <h3>📱 모바일 최적화</h3>
-                    <p>언제 어디서나 편리하게 사용할 수 있도록 모바일에 최적화된 디자인을 제공합니다.</p>
-                  </Col>
-                  <Col md={6}>
-                    <h3>📚 상세한 가이드</h3>
-                    <p>단순 계산을 넘어 실용적인 팁과 절약 방법까지 함께 제공합니다.</p>
-                    
-                    <h3>💯 무료 서비스</h3>
-                    <p>모든 계산기와 가이드를 완전 무료로 제공하며, 회원가입도 필요 없습니다.</p>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-
-        <Row className="mt-4">
-          <Col>
-            <Card>
-              <Card.Header as="h2">🔍 인기 검색 키워드</Card.Header>
-              <Card.Body>
-                <Row>
-                  <Col md={3}>
-                    <h4>복리 관련</h4>
-                    <ul className="list-unstyled small">
-                      <li>복리 계산기</li>
-                      <li>투자 수익률 계산</li>
-                      <li>복리 효과</li>
-                      <li>재테크 계산기</li>
-                    </ul>
-                  </Col>
-                  <Col md={3}>
-                    <h4>부동산 관련</h4>
-                    <ul className="list-unstyled small">
-                      <li>중개보수 계산기</li>
-                      <li>부동산 수수료</li>
-                      <li>중개보수 요율</li>
-                      <li>부동산 거래 비용</li>
-                    </ul>
-                  </Col>
-                  <Col md={3}>
-                    <h4>건강 관련</h4>
-                    <ul className="list-unstyled small">
-                      <li>BMI 계산기</li>
-                      <li>체질량지수</li>
-                      <li>비만도 계산</li>
-                      <li>건강 체중</li>
-                    </ul>
-                  </Col>
-                  <Col md={3}>
-                    <h4>급여 관련</h4>
-                    <ul className="list-unstyled small">
-                      <li>실급여 계산기</li>
-                      <li>4대보험 공제</li>
-                      <li>세금 계산</li>
-                      <li>실수령액</li>
-                    </ul>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-
-        <Row className="mt-4">
-          <Col>
-            <FAQ items={faqItems} title="🤔 자주 묻는 질문" />
-          </Col>
-        </Row>
+        <div className="text-center mt-5 pt-4">
+          <div 
+            className="d-inline-block px-4 py-2 rounded-pill mb-3" 
+            style={{ 
+              background: 'rgba(116, 185, 255, 0.1)',
+              border: '1px solid rgba(116, 185, 255, 0.2)'
+            }}
+          >
+            <small 
+              className="text-muted" 
+              style={{ 
+                fontSize: '0.85rem',
+                color: '#74b9ff !important',
+                fontWeight: '500'
+              }}
+            >
+              💝 무료 제공 · 🚀 회원가입 불필요 · 📱 모바일 최적화
+            </small>
+          </div>
+          
+          <div className="mt-3">
+            <SocialShare 
+              title="가계산 - 실생활 필수 계산기 모음"
+              description="복리, 부동산, BMI, 급여 등 다양한 계산기를 무료로 이용하세요"
+              hashtags={['가계산', '계산기', '복리계산', '부동산', '급여계산']}
+              className="justify-content-center"
+            />
+          </div>
+        </div>
       </Container>
-
-      {/* 블로그 섹션 */}
-      <BlogSection />
     </>
   );
 };
