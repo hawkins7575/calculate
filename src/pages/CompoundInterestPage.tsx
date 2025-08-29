@@ -5,7 +5,7 @@ import CompoundInterestCalculator from '../CompoundInterestCalculator';
 const CompoundInterestPage = () => {
   useEffect(() => {
     // 페이지별 메타 데이터 설정
-    document.title = '복리 계산기 - 투자 수익률 계산 및 복리 효과 분석 | 가계산';
+    document.title = '복리계산기 - 무료 온라인 투자 수익률 계산 | 가계산';
     
     // 기존 메타 태그 제거 후 새로 추가
     const removeMetaTags = () => {
@@ -17,13 +17,13 @@ const CompoundInterestPage = () => {
       // Description
       const metaDescription = document.createElement('meta');
       metaDescription.name = 'description';
-      metaDescription.content = '복리 계산기로 투자 수익률과 복리 효과를 정확히 계산해보세요. 원금, 이자율, 투자기간을 입력하면 복리 투자의 놀라운 효과를 확인할 수 있습니다. 무료 온라인 복리 계산기 서비스.';
+      metaDescription.content = '복리계산기로 투자 수익률과 복리 효과를 무료로 계산하세요. 간단한 입력만으로 복리의 마법적인 투자 효과를 확인할 수 있는 최고의 온라인 복리계산기입니다. 72의 법칙과 투자 가이드 포함.';
       document.head.appendChild(metaDescription);
       
       // Keywords
       const metaKeywords = document.createElement('meta');
       metaKeywords.name = 'keywords';
-      metaKeywords.content = '복리 계산기, 투자 수익률 계산, 복리 효과, 투자 계산기, 이자 계산, 복리 투자, 재테크 계산기, 온라인 계산기';
+      metaKeywords.content = '복리계산기, 복리 계산기, 투자 수익률 계산기, 복리 투자 계산기, 이자 계산기, 복리 효과 계산, 투자 계산기, 재테크 계산기, 온라인 복리계산기, 무료 복리계산기, 복합 이자 계산기';
       document.head.appendChild(metaKeywords);
       
       // Canonical URL
@@ -35,12 +35,12 @@ const CompoundInterestPage = () => {
       // Open Graph
       const ogTitle = document.createElement('meta');
       ogTitle.setAttribute('property', 'og:title');
-      ogTitle.setAttribute('content', '복리 계산기 - 투자 수익률 및 복리 효과 분석 | 가계산');
+      ogTitle.setAttribute('content', '복리계산기 - 무료 온라인 투자 수익률 계산 | 가계산');
       document.head.appendChild(ogTitle);
       
       const ogDescription = document.createElement('meta');
       ogDescription.setAttribute('property', 'og:description');
-      ogDescription.setAttribute('content', '무료 온라인 복리 계산기로 투자 수익률과 복리 효과를 정확히 계산하세요. 간단한 입력만으로 복리 투자의 놀라운 성장을 확인할 수 있습니다.');
+      ogDescription.setAttribute('content', '최고의 무료 온라인 복리계산기로 투자 수익률과 복리 효과를 정확히 계산하세요. 72의 법칙과 복리 투자 가이드가 포함된 전문적인 복리계산기입니다.');
       document.head.appendChild(ogDescription);
       
       const ogUrl = document.createElement('meta');

@@ -52,9 +52,9 @@ function CompoundInterestCalculator() {
   return (
     <div className="calculator-container">
       <div className="text-center mb-4">
-        <h2 className="mb-3">복리 계산기</h2>
+        <h1 className="mb-3">복리계산기</h1>
         <p className="text-muted">
-          투자 수익률과 복리 효과를 계산하여 장기 투자 계획을 세워보세요
+          무료 온라인 복리계산기로 투자 수익률과 복리 효과를 정확히 계산하여 장기 투자 계획을 세워보세요
         </p>
       </div>
 
@@ -235,6 +235,13 @@ function CompoundInterestCalculator() {
               </div>
               
               <div className="mt-4">
+                <div className="alert alert-primary">
+                  <p className="mb-2"><strong>🎯 복리계산기 사용법</strong></p>
+                  <p className="mb-0 small">
+                    이 무료 복리계산기는 초기 원금, 연이율, 투자기간을 입력하면 자동으로 복리 효과를 계산해줍니다. 
+                    온라인 복리계산기 중에서도 가장 정확하고 사용하기 쉬운 계산기입니다.
+                  </p>
+                </div>
                 <p className="mb-3"><strong>💡 투자 상품 비교</strong></p>
                 <div className="row">
                   <div className="col-md-6">

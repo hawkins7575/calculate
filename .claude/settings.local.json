@@ -31,7 +31,10 @@
       "Bash(del \"src\\RealEstateCommissionCalculator_old.tsx\")",
       "Bash(git commit:*)",
       "Bash(timeout 5 curl -L -s \"https://gaesan.shop\")",
-      "Bash(timeout 10 curl -L -s \"https://cal-dpx7bf8dy-daesung75-6440s-projects.vercel.app\")"
+      "Bash(timeout 10 curl -L -s \"https://cal-dpx7bf8dy-daesung75-6440s-projects.vercel.app\")",
+      "Read(/c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)",
+      "Bash(timeout 10 curl -L -s \"https://gaesan.shop\")",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []

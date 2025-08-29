@@ -24,6 +24,7 @@ import SavingsStrategyGuide from './pages/blog/SavingsStrategyGuide';
 import ChildcareGuide from './pages/blog/ChildcareGuide';
 import InvestmentStrategyGuide from './pages/blog/InvestmentStrategyGuide';
 import { CompoundInterestLanding, RealEstateLanding, BmiLanding, SalaryLanding } from './pages/LandingPages';
+import CompoundCalculatorLanding from './pages/CompoundCalculatorLanding';
 import PrivacyPolicy from './PrivacyPolicy';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
@@ -136,7 +137,7 @@ function App() {
           <Route path="/guide" element={<BlogPage />} />
           
           {/* SEO 전용 랜딩 페이지들 */}
-          <Route path="/compound-calculator" element={<CompoundInterestLanding />} />
+          <Route path="/compound-calculator" element={<CompoundCalculatorLanding />} />
           <Route path="/real-estate-calculator" element={<RealEstateLanding />} />
           <Route path="/bmi-calculator" element={<BmiLanding />} />
           <Route path="/salary-calculator" element={<SalaryLanding />} />
