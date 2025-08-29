@@ -28,7 +28,10 @@
       "Bash(npx kill-port:*)",
       "Bash(sed:*)",
       "Bash(git checkout:*)",
-      "Bash(del \"src\\RealEstateCommissionCalculator_old.tsx\")"
+      "Bash(del \"src\\RealEstateCommissionCalculator_old.tsx\")",
+      "Bash(git commit:*)",
+      "Bash(timeout 5 curl -L -s \"https://gaesan.shop\")",
+      "Bash(timeout 10 curl -L -s \"https://cal-dpx7bf8dy-daesung75-6440s-projects.vercel.app\")"
     ],
     "deny": [],
     "ask": []
