@@ -34,18 +34,18 @@ const BmiPage = () => {
       
       // Open Graph
       const ogTitle = document.createElement('meta');
-      ogTitle.property = 'og:title';
-      ogTitle.content = 'BMI 계산기 - 체질량지수 및 비만도 측정 | 가계산';
+      ogTitle.setAttribute('property', 'og:title');
+      ogTitle.setAttribute('content', 'BMI 계산기 - 체질량지수 및 비만도 측정 | 가계산');
       document.head.appendChild(ogTitle);
       
       const ogDescription = document.createElement('meta');
-      ogDescription.property = 'og:description';
-      ogDescription.content = 'BMI 계산기로 체질량지수를 계산하고 건강 상태를 확인하세요. 키와 몸무게로 간단히 BMI 지수 측정.';
+      ogDescription.setAttribute('property', 'og:description');
+      ogDescription.setAttribute('content', 'BMI 계산기로 체질량지수를 계산하고 건강 상태를 확인하세요. 키와 몸무게로 간단히 BMI 지수 측정.');
       document.head.appendChild(ogDescription);
       
       const ogUrl = document.createElement('meta');
-      ogUrl.property = 'og:url';
-      ogUrl.content = 'https://gaesan.shop/bmi';
+      ogUrl.setAttribute('property', 'og:url');
+      ogUrl.setAttribute('content', 'https://gaesan.shop/bmi');
       document.head.appendChild(ogUrl);
     };
     

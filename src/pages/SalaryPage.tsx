@@ -34,18 +34,18 @@ const SalaryPage = () => {
       
       // Open Graph
       const ogTitle = document.createElement('meta');
-      ogTitle.property = 'og:title';
-      ogTitle.content = '실급여 계산기 - 4대보험 공제 후 실수령액 | 가계산';
+      ogTitle.setAttribute('property', 'og:title');
+      ogTitle.setAttribute('content', '실급여 계산기 - 4대보험 공제 후 실수령액 | 가계산');
       document.head.appendChild(ogTitle);
       
       const ogDescription = document.createElement('meta');
-      ogDescription.property = 'og:description';
-      ogDescription.content = '실급여 계산기로 세금과 4대보험 공제 후 실제 수령하는 금액을 정확히 계산하세요.';
+      ogDescription.setAttribute('property', 'og:description');
+      ogDescription.setAttribute('content', '실급여 계산기로 세금과 4대보험 공제 후 실제 수령하는 금액을 정확히 계산하세요.');
       document.head.appendChild(ogDescription);
       
       const ogUrl = document.createElement('meta');
-      ogUrl.property = 'og:url';
-      ogUrl.content = 'https://gaesan.shop/salary';
+      ogUrl.setAttribute('property', 'og:url');
+      ogUrl.setAttribute('content', 'https://gaesan.shop/salary');
       document.head.appendChild(ogUrl);
     };
     

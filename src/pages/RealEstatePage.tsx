@@ -34,18 +34,18 @@ const RealEstatePage = () => {
       
       // Open Graph
       const ogTitle = document.createElement('meta');
-      ogTitle.property = 'og:title';
-      ogTitle.content = '부동산 중개보수 계산기 - 거래 수수료 계산 | 가계산';
+      ogTitle.setAttribute('property', 'og:title');
+      ogTitle.setAttribute('content', '부동산 중개보수 계산기 - 거래 수수료 계산 | 가계산');
       document.head.appendChild(ogTitle);
       
       const ogDescription = document.createElement('meta');
-      ogDescription.property = 'og:description';
-      ogDescription.content = '부동산 거래 시 중개수수료를 정확히 계산해보세요. 매매, 전세, 월세별 법정 상한요율 적용으로 실제 수수료를 미리 확인할 수 있습니다.';
+      ogDescription.setAttribute('property', 'og:description');
+      ogDescription.setAttribute('content', '부동산 거래 시 중개수수료를 정확히 계산해보세요. 매매, 전세, 월세별 법정 상한요율 적용으로 실제 수수료를 미리 확인할 수 있습니다.');
       document.head.appendChild(ogDescription);
       
       const ogUrl = document.createElement('meta');
-      ogUrl.property = 'og:url';
-      ogUrl.content = 'https://gaesan.shop/real-estate';
+      ogUrl.setAttribute('property', 'og:url');
+      ogUrl.setAttribute('content', 'https://gaesan.shop/real-estate');
       document.head.appendChild(ogUrl);
     };
     

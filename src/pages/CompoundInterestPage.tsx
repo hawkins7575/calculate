@@ -34,18 +34,18 @@ const CompoundInterestPage = () => {
       
       // Open Graph
       const ogTitle = document.createElement('meta');
-      ogTitle.property = 'og:title';
-      ogTitle.content = '복리 계산기 - 투자 수익률 및 복리 효과 분석 | 가계산';
+      ogTitle.setAttribute('property', 'og:title');
+      ogTitle.setAttribute('content', '복리 계산기 - 투자 수익률 및 복리 효과 분석 | 가계산');
       document.head.appendChild(ogTitle);
       
       const ogDescription = document.createElement('meta');
-      ogDescription.property = 'og:description';
-      ogDescription.content = '무료 온라인 복리 계산기로 투자 수익률과 복리 효과를 정확히 계산하세요. 간단한 입력만으로 복리 투자의 놀라운 성장을 확인할 수 있습니다.';
+      ogDescription.setAttribute('property', 'og:description');
+      ogDescription.setAttribute('content', '무료 온라인 복리 계산기로 투자 수익률과 복리 효과를 정확히 계산하세요. 간단한 입력만으로 복리 투자의 놀라운 성장을 확인할 수 있습니다.');
       document.head.appendChild(ogDescription);
       
       const ogUrl = document.createElement('meta');
-      ogUrl.property = 'og:url';
-      ogUrl.content = 'https://gaesan.shop/compound-interest';
+      ogUrl.setAttribute('property', 'og:url');
+      ogUrl.setAttribute('content', 'https://gaesan.shop/compound-interest');
       document.head.appendChild(ogUrl);
       
       // Twitter Card
