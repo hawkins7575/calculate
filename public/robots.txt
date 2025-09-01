@@ -50,8 +50,18 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /
 
-# 네이버 검색봇 허용
+# 네이버 검색봇 허용 (우선순위 높게)
 User-agent: Yeti
+Allow: /
+Allow: /compound-interest
+Allow: /real-estate
+Allow: /bmi
+Allow: /salary
+Allow: /blog/*
+Crawl-delay: 1
+
+# 네이버 모바일 검색봇 허용
+User-agent: NaverBot
 Allow: /
 Crawl-delay: 1
 
