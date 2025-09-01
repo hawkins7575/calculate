@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>가계산 - 금융 계산기 가이드</title>
+    <link>https://gaesan.shop</link>
+    <description>복리 계산기, 부동산 중개보수 계산기, BMI 계산기, 실급여 계산기 등 실생활 필수 계산기와 투자 가이드를 제공하는 가계산의 블로그입니다.</description>
+    <language>ko-KR</language>
+    <pubDate>Sun, 29 Aug 2024 00:00:00 +0900</pubDate>
+    <lastBuildDate>Sun, 29 Aug 2024 00:00:00 +0900</lastBuildDate>
+    <managingEditor>contact@gaesan.shop (가계산)</managingEditor>
+    <webMaster>webmaster@gaesan.shop (가계산)</webMaster>
+    <category>금융/투자</category>
+    <ttl>1440</ttl>
+    <atom:link href="https://gaesan.shop/rss.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://gaesan.shop/og-image.jpg</url>
+      <title>가계산</title>
+      <link>https://gaesan.shop</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+
+    <!-- 복리 투자 가이드 -->
+    <item>
+      <title>복리 투자의 마법: 시간이 만들어내는 기적적인 수익률</title>
+      <link>https://gaesan.shop/blog/compound-interest-guide</link>
+      <description>복리 효과를 활용한 장기 투자 전략과 72의 법칙, 복리계산기 활용법을 상세히 알아보세요. 시간이 만들어내는 투자의 마법을 경험해보세요.</description>
+      <content:encoded><![CDATA[
+        <p>복리 투자는 "돈이 돈을 낳는" 투자의 기본 원리입니다. 단순히 원금에만 이자가 붙는 단리와 달리, 복리는 이자에도 이자가 붙어 시간이 지날수록 기하급수적으로 증가합니다.</p>
+        <h3>복리의 핵심 개념</h3>
+        <ul>
+          <li><strong>72의 법칙</strong>: 72 ÷ 수익률 = 투자금이 2배가 되는 기간</li>
+          <li><strong>시간의 마법</strong>: 일찍 시작할수록 복리 효과 극대화</li>
+          <li><strong>재투자의 중요성</strong>: 배당금과 이자를 재투자해야 복리 효과 실현</li>
+        </ul>
+        <p>복리계산기를 활용하여 다양한 시나리오를 시뮬레이션해보고, 자신만의 투자 계획을 세워보세요.</p>
+      ]]></content:encoded>
+      <pubDate>Sun, 25 Aug 2024 10:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://gaesan.shop/blog/compound-interest-guide</guid>
+      <category>투자</category>
+      <category>복리</category>
+      <category>재테크</category>
+    </item>
+
+    <!-- 부동산 중개보수 절약 가이드 -->
+    <item>
+      <title>부동산 중개보수 절약하는 방법: 수수료 계산기로 비용 절감하기</title>
+      <link>https://gaesan.shop/blog/real-estate-commission-save</link>
+      <description>부동산 거래 시 중개보수를 절약할 수 있는 실전 방법과 중개보수 계산기 활용법을 알려드립니다. 거래 비용을 크게 줄일 수 있는 노하우를 확인하세요.</description>
+      <content:encoded><![CDATA[
+        <p>부동산 거래에서 중개보수는 상당한 비용입니다. 하지만 정확한 계산과 협상을 통해 상당한 절약이 가능합니다.</p>
+        <h3>중개보수 절약 전략</h3>
+        <ul>
+          <li><strong>요율 협상</strong>: 법정 상한요율보다 낮게 협상 가능</li>
+          <li><strong>복수 공인중개사 비교</strong>: 여러 업체 견적 비교</li>
+          <li><strong>직거래 활용</strong>: 플랫폼을 통한 직거래로 수수료 절약</li>
+        </ul>
+        <p>중개보수 계산기로 정확한 비용을 미리 계산하고 합리적인 거래를 진행하세요.</p>
+      ]]></content:encoded>
+      <pubDate>Sun, 22 Aug 2024 14:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://gaesan.shop/blog/real-estate-commission-save</guid>
+      <category>부동산</category>
+      <category>중개보수</category>
+      <category>절약</category>
+    </item>
+
+    <!-- BMI 아시아 기준 가이드 -->
+    <item>
+      <title>한국인 BMI 지수: 아시아 기준으로 정확한 비만도 측정하기</title>
+      <link>https://gaesan.shop/blog/bmi-asian-standard</link>
+      <description>서구 기준과 다른 아시아인 BMI 기준을 알아보고, BMI 계산기로 정확한 건강 상태를 확인하세요. 한국인에게 맞는 적정체중 가이드를 제공합니다.</description>
+      <content:encoded><![CDATA[
+        <p>BMI 지수는 건강한 체중 관리의 기본 지표입니다. 하지만 아시아인은 서구인과 체질이 달라 별도의 기준이 필요합니다.</p>
+        <h3>아시아인 BMI 기준</h3>
+        <ul>
+          <li><strong>저체중</strong>: 18.5 미만</li>
+          <li><strong>정상체중</strong>: 18.5-22.9</li>
+          <li><strong>과체중</strong>: 23.0-24.9</li>
+          <li><strong>비만</strong>: 25.0 이상</li>
+        </ul>
+        <p>BMI 계산기로 현재 상태를 확인하고 건강한 체중 관리 계획을 세워보세요.</p>
+      ]]></content:encoded>
+      <pubDate>Sun, 20 Aug 2024 11:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://gaesan.shop/blog/bmi-asian-standard</guid>
+      <category>건강</category>
+      <category>BMI</category>
+      <category>다이어트</category>
+    </item>
+
+    <!-- 실급여 계산 가이드 -->
+    <item>
+      <title>2024년 실급여 계산 완벽 가이드: 4대보험과 세금 공제 이해하기</title>
+      <link>https://gaesan.shop/blog/salary-calculation-guide</link>
+      <description>월급에서 4대보험과 각종 세금이 얼마나 공제되는지 정확히 알아보세요. 실급여 계산기로 실제 받는 금액을 미리 확인할 수 있습니다.</description>
+      <content:encoded><![CDATA[
+        <p>월급 명세서를 받을 때마다 "이렇게 많이 떼이나?" 하고 놀란 경험이 있으실 겁니다. 실급여 계산의 원리를 이해해보세요.</p>
+        <h3>급여 공제 항목</h3>
+        <ul>
+          <li><strong>국민연금</strong>: 4.5% (상한 486만원)</li>
+          <li><strong>건강보험</strong>: 3.545%</li>
+          <li><strong>고용보험</strong>: 0.9%</li>
+          <li><strong>소득세 및 지방소득세</strong>: 소득구간별 차등</li>
+        </ul>
+        <p>실급여 계산기로 정확한 실수령액을 미리 계산하고 합리적인 소비 계획을 세워보세요.</p>
+      ]]></content:encoded>
+      <pubDate>Sun, 18 Aug 2024 09:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://gaesan.shop/blog/salary-calculation-guide</guid>
+      <category>급여</category>
+      <category>4대보험</category>
+      <category>세금</category>
+    </item>
+
+    <!-- 은퇴자금 계획 가이드 -->
+    <item>
+      <title>은퇴자금 계획: 편안한 노후를 위한 필요 자금 계산하기</title>
+      <link>https://gaesan.shop/blog/retirement-planning</link>
+      <description>은퇴 후 필요한 생활비와 의료비를 계산하고, 은퇴자금 계산기로 목표 금액을 설정해보세요. 체계적인 은퇴 준비 가이드를 제공합니다.</description>
+      <content:encoded><![CDATA[
+        <p>은퇴 준비는 하루빨리 시작해야 하는 중요한 재정 계획입니다. 인플레이션과 기대수명 증가를 고려한 계획이 필요합니다.</p>
+        <h3>은퇴자금 계획 단계</h3>
+        <ul>
+          <li><strong>목표 설정</strong>: 은퇴 후 필요한 월 생활비 계산</li>
+          <li><strong>기간 설정</strong>: 은퇴 시점과 예상 수명 고려</li>
+          <li><strong>투자 계획</strong>: 위험 성향에 맞는 포트폴리오 구성</li>
+        </ul>
+        <p>은퇴자금 계산기로 현실적인 목표를 설정하고 단계적으로 준비해나가세요.</p>
+      ]]></content:encoded>
+      <pubDate>Sun, 15 Aug 2024 16:00:00 +0900</pubDate>
+      <guid isPermaLink="true">https://gaesan.shop/blog/retirement-planning</guid>
+      <category>은퇴</category>
+      <category>재테크</category>
+      <category>연금</category>
+    </item>
+
+  </channel>
+</rss>
