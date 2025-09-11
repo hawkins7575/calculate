@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
+import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface CommissionResult {
   commission: number;
@@ -188,6 +189,9 @@ const RealEstateCommissionCalculator = () => {
         </p>
       </div>
 
+      {/* 헤더 광고 */}
+      <HeaderAd />
+
       <Row>
         <Col lg={8}>
           <Card>
@@ -245,20 +249,7 @@ const RealEstateCommissionCalculator = () => {
         </Col>
         
         <Col lg={4}>
-          <div className="sticky-top" style={{top: '20px'}}>
-            <Card className="border-0 bg-light">
-              <Card.Body className="text-center">
-                <div style={{minHeight: '250px'}} className="d-flex align-items-center justify-content-center">
-                  <div>
-                    <h6 className="text-muted mb-3">광고 영역</h6>
-                    <div className="bg-white border rounded p-4" style={{minHeight: '200px'}}>
-                      <p className="text-muted small mb-0">Google AdSense<br/>광고가 여기에 표시됩니다</p>
-                    </div>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-          </div>
+          <SidebarAd />
         </Col>
       </Row>
 
@@ -302,6 +293,9 @@ const RealEstateCommissionCalculator = () => {
           </Col>
         </Row>
       )}
+
+      {/* 결과 후 광고 */}
+      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>

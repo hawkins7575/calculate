@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
+import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface SavingsResult {
   totalDeposit: number;
@@ -121,6 +122,9 @@ const SavingsCalculator = () => {
           적금과 예금의 만기 수익을 계산하여 최적의 저축 계획을 세워보세요
         </p>
       </div>
+
+      {/* 헤더 광고 */}
+      <HeaderAd />
 
       <Row>
         <Col lg={8}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table, Alert } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
+import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface TaxResult {
   taxableAmount: number;
@@ -131,6 +132,9 @@ const InheritanceTaxCalculator = () => {
           상속세와 증여세를 미리 계산하여 절세 계획을 세워보세요
         </p>
       </div>
+
+      {/* 헤더 광고 */}
+      <HeaderAd />
 
       <Row>
         <Col lg={8}>

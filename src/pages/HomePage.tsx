@@ -6,6 +6,7 @@ import HomeIcon from '../icons/HomeIcon';
 import BmiIcon from '../icons/BmiIcon';
 import SalaryIcon from '../icons/SalaryIcon';
 import SocialShare from '../components/SocialShare';
+import { HeaderAd, InFeedAd } from '../components/AdSenseUnits';
 
 const HomePage = () => {
   useEffect(() => {
@@ -105,6 +106,9 @@ const HomePage = () => {
             <span style={{ color: '#7f8c8d' }}>간편하고 정확하게</span>
           </p>
         </div>
+
+        {/* 헤더 광고 */}
+        <HeaderAd />
 
         <Row className="justify-content-center g-4">
           {calculators.map((calc, index) => (

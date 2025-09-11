@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
 import AdSense from './components/AdSense';
+import { InFeedAd, HeaderAd } from './components/AdSenseUnits';
 import SocialShare from './components/SocialShare';
 
 interface IYearlyData {
@@ -57,6 +58,9 @@ function CompoundInterestCalculator() {
           무료 온라인 복리계산기로 투자 수익률과 복리 효과를 정확히 계산하여 장기 투자 계획을 세워보세요
         </p>
       </div>
+
+      {/* 헤더 광고 */}
+      <HeaderAd />
 
       <Row>
         <Col lg={8}>
@@ -120,7 +124,12 @@ function CompoundInterestCalculator() {
         </Col>
         
         <Col lg={4}>
-          <AdSense />
+          <AdSense 
+            slot="7865432109"
+            format="auto"
+            responsive={true}
+            style={{ minHeight: '250px' }}
+          />
         </Col>
       </Row>
 
@@ -188,6 +197,9 @@ function CompoundInterestCalculator() {
           </Col>
         </Row>
       )}
+
+      {/* 결과 후 광고 */}
+      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>
