@@ -19,18 +19,14 @@ const AdSense: React.FC<AdSenseProps> = ({
 
   useEffect(() => {
     try {
-      // 개발 환경에서 AdSense 로딩 상태 확인
-      console.log('AdSense loading attempt...');
-      console.log('Environment:', process.env.NODE_ENV);
-      console.log('Current URL:', window.location.hostname);
-      
-      // AdSense 광고 로드
-      if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
-        console.log('AdSense script found, pushing ad...');
-        ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-      } else {
-        console.log('AdSense script not loaded yet');
-      }
+      // AdSense 광고 로드 - 약간의 지연 후 실행
+      const timer = setTimeout(() => {
+        if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
+          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        }
+      }, 100);
+
+      return () => clearTimeout(timer);
     } catch (error) {
       console.error('AdSense error:', error);
     }

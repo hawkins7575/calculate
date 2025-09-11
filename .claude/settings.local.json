@@ -36,6 +36,7 @@
       "Bash(timeout 10 curl -L -s \"https://gaesan.shop\")",
       "Bash(timeout:*)",
       "Read(/c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)",
+      "Read(c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)",
       "Read(c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)"
     ],
     "deny": [],

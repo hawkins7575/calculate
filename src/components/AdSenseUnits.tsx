@@ -6,7 +6,7 @@ export const SidebarAd: React.FC = () => {
   return (
     <div className="sticky-top" style={{ top: '20px' }}>
       <AdSense
-        slot="1234567890"
+        slot="7865432109"
         format="auto"
         responsive={true}
         style={{ 
@@ -24,8 +24,8 @@ export const HeaderAd: React.FC = () => {
   return (
     <div className="text-center mb-4">
       <AdSense
-        slot="2345678901"
-        format="horizontal"
+        slot="7865432109"
+        format="auto"
         responsive={true}
         style={{ 
           minHeight: '90px',
@@ -42,8 +42,8 @@ export const InFeedAd: React.FC = () => {
   return (
     <div className="my-4 text-center">
       <AdSense
-        slot="3456789012"
-        format="fluid"
+        slot="7865432109"
+        format="auto"
         responsive={true}
         style={{ 
           minHeight: '200px'
