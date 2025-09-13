@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
-import AdSense from './components/AdSense';
 
 interface LoanResult {
   monthlyPayment: number;
@@ -110,23 +109,10 @@ const LoanCalculator = () => {
         </p>
       </div>
 
-      {/* 헤더 광고 */}
-      <div className="text-center mb-4">
-        <AdSense 
-          slot="7865432109"
-          format="auto"
-          responsive={true}
-          style={{ 
-            minHeight: '90px',
-            maxHeight: '120px'
-          }}
-          className="header-ad"
-        />
-      </div>
 
 
       <Row>
-        <Col lg={8}>
+        <Col>
           <Card>
             <Card.Header>
               <h5 className="mb-0">📋 대출 조건 입력</h5>
@@ -198,21 +184,6 @@ const LoanCalculator = () => {
               </Form>
             </Card.Body>
           </Card>
-        </Col>
-        
-        <Col lg={4}>
-          <div className="sticky-top" style={{ top: '20px' }}>
-            <AdSense
-              slot="7865432109"
-              format="auto"
-              responsive={true}
-              style={{ 
-                minHeight: '250px',
-                marginBottom: '20px'
-              }}
-              className="sidebar-ad"
-            />
-          </div>
         </Col>
       </Row>
 
@@ -288,20 +259,6 @@ const LoanCalculator = () => {
       </Row>
       )}
 
-      {/* 결과 후 광고 */}
-      {result && (
-        <div className="my-4 text-center">
-          <AdSense
-            slot="7865432109"
-            format="auto"
-            responsive={true}
-            style={{ 
-              minHeight: '200px'
-            }}
-            className="infeed-ad"
-          />
-        </div>
-      )}
 
       <Row className="mt-4">
         <Col>

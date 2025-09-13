@@ -1,64 +1,32 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-// 수동 광고 전용 컴포넌트
-// 기존 광고 영역에만 광고 표시
+// Auto Ads 전용 컴포넌트 (수동 광고 단위 제거)
+// Auto Ads는 Google에서 자동으로 최적 위치에 광고 배치
 
 interface AdSenseProps {
-  slot?: string;
-  format?: string;
-  responsive?: boolean;
   style?: React.CSSProperties;
   className?: string;
 }
 
-const AdSense: React.FC<AdSenseProps> = ({ 
-  slot = '7865432109',
-  format = 'auto',
-  responsive = true,
+const AdSense: React.FC<AdSenseProps> = ({
   style = {},
   className = ''
 }) => {
-  const adRef = useRef<HTMLModElement>(null);
-
-  useEffect(() => {
-    // 개발 환경에서는 초기화 건너뛰기
-    if (process.env.NODE_ENV === 'development') {
-      return;
-    }
-
-    // 수동 광고 로드
-    const timer = setTimeout(() => {
-      try {
-        if (typeof window !== 'undefined' && (window as any).adsbygoogle && adRef.current) {
-          // 이미 광고가 로드되어 있는지 확인
-          const insElement = adRef.current.querySelector('ins');
-          if (insElement && !insElement.hasAttribute('data-adsbygoogle-status')) {
-            ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-          }
-        }
-      } catch (error) {
-        console.error('AdSense error:', error);
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   // 개발 환경에서 플레이스홀더 표시
   const isDevelopment = process.env.NODE_ENV === 'development';
   const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
 
   if (isDevelopment && isLocalhost) {
     return (
-      <div 
-        className={`adsense-placeholder ${className}`} 
+      <div
+        className={`adsense-placeholder ${className}`}
         style={{
-          ...style, 
-          border: '2px dashed #007bff', 
-          borderRadius: '8px', 
-          padding: '15px', 
-          textAlign: 'center', 
-          backgroundColor: '#f8f9fa',
+          ...style,
+          border: '2px dashed #28a745',
+          borderRadius: '8px',
+          padding: '15px',
+          textAlign: 'center',
+          backgroundColor: '#f8fff8',
           margin: '10px 0',
           minHeight: '100px',
           display: 'flex',
@@ -66,32 +34,28 @@ const AdSense: React.FC<AdSenseProps> = ({
           justifyContent: 'center'
         }}
       >
-        <div style={{ color: '#007bff', fontSize: '14px', fontWeight: '500' }}>
-          📢 <strong>수동 광고 영역</strong>
+        <div style={{ color: '#28a745', fontSize: '14px', fontWeight: '500' }}>
+          🤖 <strong>Auto Ads 영역</strong>
           <br />
-          <small style={{ color: '#6c757d' }}>슬롯: {slot}</small><br />
-          <small style={{ color: '#6c757d' }}>형식: {format}</small><br />
           <small style={{ color: '#6c757d', marginTop: '5px', display: 'inline-block' }}>
-            실제 배포시 이 위치에 광고가 표시됩니다
+            실제 배포시 Google이 자동으로 최적 위치에 광고를 배치합니다
           </small>
         </div>
       </div>
     );
   }
 
-  // 수동 광고
+  // Auto Ads는 HTML head의 스크립트만으로 작동하므로
+  // 수동 광고 영역은 제거하고 spacer만 남김
   return (
-    <div className={`adsense-container ${className}`} style={style}>
-      <ins
-        ref={adRef}
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-1493954029378412"
-        data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive={responsive ? "true" : "false"}
-      />
-    </div>
+    <div
+      className={`adsense-auto-spacer ${className}`}
+      style={{
+        ...style,
+        minHeight: '20px', // 약간의 여백만 제공
+        margin: '10px 0'
+      }}
+    />
   );
 };
 
