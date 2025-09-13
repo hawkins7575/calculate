@@ -265,6 +265,9 @@ const SalaryCalculator = () => {
                     <li className="mb-2">
                       <strong>• 신용카드 등:</strong> 총급여의 25% 초과분, 최대 330만원 소득공제
                     </li>
+                    <li className="mb-0">
+                      <strong>• 장기 투자:</strong> <a href="/" className="text-primary">복리계산기</a>로 투자 수익률을 계산해보세요
+                    </li>
                   </ul>
                 </Col>
                 <Col md={6}>

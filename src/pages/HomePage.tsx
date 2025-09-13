@@ -15,11 +15,11 @@ const HomePage = () => {
 
   const calculators = [
     {
-      title: '복리 계산기',
-      description: '투자 수익률과 복리 효과를 계산하여 장기 투자 계획을 세워보세요',
-      icon: <CalculatorIcon className="nav-icon" alt="복리 계산기 아이콘" />,
+      title: '🏆 복리계산기',
+      description: '무료 복리계산기로 투자 수익률과 복리 효과를 정확히 계산하여 장기 투자 계획을 세워보세요. 72의 법칙과 연도별 수익률 제공',
+      icon: <CalculatorIcon className="nav-icon" alt="복리계산기 아이콘" />,
       link: '/compound-interest',
-      keywords: '복리, 투자, 수익률'
+      keywords: '복리계산기, 복리 계산기, 무료 복리계산기, 온라인 복리계산기, 복리 투자 계산기, 복리 시뮬레이션, 투자 수익률'
     },
     {
       title: '부동산 중개보수 계산기',

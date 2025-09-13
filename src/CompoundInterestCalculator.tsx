@@ -51,10 +51,22 @@ function CompoundInterestCalculator() {
   return (
     <div className="calculator-container">
       <div className="text-center mb-3">
-        <h1 className="mb-3">복리계산기</h1>
+        <h1 className="mb-3">복리계산기 | 무료 온라인 복리 투자 수익률 계산</h1>
         <p className="text-muted">
-          무료 온라인 복리계산기로 투자 수익률과 복리 효과를 정확히 계산하여 장기 투자 계획을 세워보세요
+          <strong>무료 복리계산기</strong>로 투자 수익률과 복리 효과를 정확히 계산하세요.
+          복리 투자 시뮬레이션부터 목표 금액 달성 기간, 72의 법칙까지 한번에 계산 가능한
+          <strong>전문가급 복리계산기</strong>입니다.
         </p>
+
+        <div className="alert alert-info mb-4" style={{ textAlign: 'left' }}>
+          <h5>🎯 복리계산기 주요 기능</h5>
+          <ul className="mb-0">
+            <li><strong>복리 투자 시뮬레이션</strong>: 원금, 이자율, 기간을 입력하여 복리 효과 계산</li>
+            <li><strong>목표 금액 계산</strong>: 원하는 목표 금액 달성을 위한 투자 기간 및 월 적립액 계산</li>
+            <li><strong>72의 법칙 적용</strong>: 투자 원금이 2배가 되는 기간 자동 계산</li>
+            <li><strong>연간 수익률 비교</strong>: 다양한 이자율별 복리 효과 비교 분석</li>
+          </ul>
+        </div>
       </div>
 
       <Row className="justify-content-center">
@@ -189,7 +201,7 @@ function CompoundInterestCalculator() {
         <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
-              <h6 className="mb-0">💡 복리 투자 가이드</h6>
+              <h2 className="h6 mb-0">💡 복리계산기 활용 가이드 및 복리 투자 전략</h2>
             </Card.Header>
             <Card.Body>
               <Row>
@@ -287,6 +299,59 @@ function CompoundInterestCalculator() {
             hashtags={['복리계산기', '투자', '수익률', '가계산']}
             className="justify-content-center"
           />
+        </Col>
+      </Row>
+
+      {/* SEO 강화를 위한 추가 컨텐츠 */}
+      <Row className="justify-content-center mt-4">
+        <Col xs={12} lg={8} xl={6}>
+          <div className="bg-light p-4 rounded">
+            <h3 className="h5 mb-3">🔍 복리계산기 자주 묻는 질문 (FAQ)</h3>
+
+            <div className="mb-4">
+              <h4 className="h6 text-primary">Q. 복리계산기는 어떻게 사용하나요?</h4>
+              <p className="small mb-3">
+                <strong>복리계산기</strong> 사용법은 간단합니다. ① 원금(초기투자금액) 입력 → ② 연간 수익률(%) 입력 →
+                ③ 투자 기간(년) 입력 → ④ 계산하기 버튼 클릭. 즉시 <strong>복리 효과</strong>와 최종 수익금을 확인할 수 있습니다.
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="h6 text-primary">Q. 72의 법칙이란 무엇인가요?</h4>
+              <p className="small mb-3">
+                <strong>72의 법칙</strong>은 투자 원금이 2배가 되는 기간을 쉽게 계산하는 방법입니다.
+                72를 연간 수익률로 나누면 됩니다. 예: 연 6% 수익률 → 72÷6 = 12년 후 원금 2배 달성.
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="h6 text-primary">Q. 복리와 단리의 차이점은?</h4>
+              <p className="small mb-3">
+                <strong>단리</strong>는 원금에만 이자를 적용하지만, <strong>복리</strong>는 원금 + 이자에 다시 이자를 적용합니다.
+                시간이 지날수록 복리의 수익률이 기하급수적으로 증가하여 '복리의 마법'이라고 불립니다.
+              </p>
+            </div>
+
+            <div className="mb-4">
+              <h4 className="h6 text-primary">Q. 이 복리계산기의 장점은?</h4>
+              <p className="small mb-3">
+                ✅ <strong>무료</strong> 사용 가능<br/>
+                ✅ 정확한 복리 계산 공식 적용<br/>
+                ✅ 연도별 상세 수익률 제공<br/>
+                ✅ 72의 법칙 자동 계산<br/>
+                ✅ 모바일 최적화 반응형 디자인
+              </p>
+            </div>
+
+            <div className="border-top pt-3">
+              <h4 className="h6 mb-2">🏷️ 관련 키워드</h4>
+              <p className="small text-muted">
+                복리계산기, 복리 계산기, 무료 복리계산기, 온라인 복리계산기, 복리 투자 계산기,
+                복리 시뮬레이션, 복리 효과 계산, 투자 수익률 계산기, 72의 법칙, 복리 공식,
+                이자 복리 계산, 적금 복리계산기, 예금 복리계산기, 장기투자 계산기
+              </p>
+            </div>
+          </div>
         </Col>
       </Row>
     </div>

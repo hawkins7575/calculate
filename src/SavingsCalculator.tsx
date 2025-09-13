@@ -345,8 +345,11 @@ const SavingsCalculator = () => {
                 <li className="mb-1">
                   <strong>• 자동이체:</strong> 급여이체 시 우대금리 혜택 활용
                 </li>
-                <li className="mb-0">
+                <li className="mb-1">
                   <strong>• 분산 저축:</strong> 예금자보호 한도(5천만원) 고려
+                </li>
+                <li className="mb-0">
+                  <strong>• 복리 효과:</strong> 장기 투자 시 <a href="/" className="text-primary">복리계산기</a>로 복리 효과를 확인하세요
                 </li>
               </ul>
               
