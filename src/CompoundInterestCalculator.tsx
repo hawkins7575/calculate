@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
-import AdSense from './components/AdSense';
-import { InFeedAd, HeaderAd } from './components/AdSenseUnits';
 import SocialShare from './components/SocialShare';
 
 interface IYearlyData {
@@ -60,7 +58,6 @@ function CompoundInterestCalculator() {
       </div>
 
       {/* 헤더 광고 */}
-      <HeaderAd />
 
       <Row>
         <Col lg={8}>
@@ -124,12 +121,8 @@ function CompoundInterestCalculator() {
         </Col>
         
         <Col lg={4}>
-          <AdSense 
-            slot="7865432109"
-            format="auto"
-            responsive={true}
-            style={{ minHeight: '250px' }}
-          />
+          {/* Auto Ads가 이 공간에 자동으로 광고를 배치합니다 */}
+          <div style={{ minHeight: '250px' }} />
         </Col>
       </Row>
 
@@ -199,7 +192,6 @@ function CompoundInterestCalculator() {
       )}
 
       {/* 결과 후 광고 */}
-      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>

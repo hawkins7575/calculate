@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
-import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface BmiResult {
   bmi: number;
@@ -83,8 +82,6 @@ const BmiCalculator = () => {
         </p>
       </div>
 
-      {/* 헤더 광고 */}
-      <HeaderAd />
 
       <Row>
         <Col lg={8}>
@@ -134,9 +131,6 @@ const BmiCalculator = () => {
           </Card>
         </Col>
         
-        <Col lg={4}>
-          <SidebarAd />
-        </Col>
       </Row>
 
       {result && (
@@ -225,8 +219,6 @@ const BmiCalculator = () => {
         </Row>
       )}
 
-      {/* 결과 후 광고 */}
-      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>

@@ -37,7 +37,16 @@
       "Bash(timeout:*)",
       "Read(/c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)",
       "Read(c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)",
-      "Read(c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)"
+      "Read(c:\\Users\\kim_d\\OneDrive\\사진\\스크린샷/**)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run:*)",
+      "Bash(set PORT=3001)",
+      "Bash(cross-env:*)",
+      "Bash($env:PORT=3001)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(del \"C:\\Users\\kim_d\\OneDrive\\바탕 화면\\app\\cal\\src\\components\\AdSenseUnits.tsx\")"
     ],
     "deny": [],
     "ask": []

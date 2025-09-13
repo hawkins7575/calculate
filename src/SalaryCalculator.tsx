@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
-import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface SalaryResult {
   grossSalary: number;
@@ -90,8 +89,6 @@ const SalaryCalculator = () => {
         </p>
       </div>
 
-      {/* 헤더 광고 */}
-      <HeaderAd />
 
       <Row>
         <Col lg={8}>
@@ -160,9 +157,6 @@ const SalaryCalculator = () => {
           </Card>
         </Col>
         
-        <Col lg={4}>
-          <SidebarAd />
-        </Col>
       </Row>
 
       {result && (
@@ -249,8 +243,6 @@ const SalaryCalculator = () => {
         </Row>
       )}
 
-      {/* 결과 후 광고 */}
-      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>

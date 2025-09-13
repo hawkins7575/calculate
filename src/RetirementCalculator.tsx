@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Alert, Row, Col } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
-import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface RetirementResult {
   totalAmount: number;
@@ -60,8 +59,6 @@ const RetirementCalculator = () => {
         </p>
       </div>
 
-      {/* 헤더 광고 */}
-      <HeaderAd />
 
       <Row>
         <Col lg={8}>
@@ -122,9 +119,6 @@ const RetirementCalculator = () => {
           </Card>
         </Col>
         
-        <Col lg={4}>
-          <SidebarAd />
-        </Col>
       </Row>
 
       {result && (
@@ -171,8 +165,6 @@ const RetirementCalculator = () => {
         </Row>
       )}
 
-      {/* 결과 후 광고 */}
-      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>

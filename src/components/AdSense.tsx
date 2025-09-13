@@ -1,70 +1,53 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+
+// Auto Ads 전용 플레이스홀더 컴포넌트
+// Google Auto Ads는 HTML head에서 자동으로 작동하므로
+// 이 컴포넌트는 개발 환경에서만 플레이스홀더 역할을 합니다.
 
 interface AdSenseProps {
-  slot?: string;
-  format?: string;
-  responsive?: boolean;
-  style?: React.CSSProperties;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const AdSense: React.FC<AdSenseProps> = ({ 
-  slot = '7865432109',
-  format = 'auto',
-  responsive = true,
-  style = {},
-  className = ''
+  className = '',
+  style = {}
 }) => {
-  const adRef = useRef<HTMLModElement>(null);
-
-  useEffect(() => {
-    try {
-      // AdSense 광고 로드 - 약간의 지연 후 실행
-      const timer = setTimeout(() => {
-        if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
-          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-        }
-      }, 100);
-
-      return () => clearTimeout(timer);
-    } catch (error) {
-      console.error('AdSense error:', error);
-    }
-  }, []);
-
-  // 개발 환경에서 플레이스홀더 표시
+  // 개발 환경에서만 플레이스홀더 표시
   const isDevelopment = process.env.NODE_ENV === 'development';
   const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
 
   if (isDevelopment && isLocalhost) {
     return (
-      <div className={`adsense-container ${className}`} style={{...style, border: '2px dashed #ccc', borderRadius: '8px', padding: '20px', textAlign: 'center', backgroundColor: '#f8f9fa'}}>
-        <div style={{ color: '#6c757d', fontSize: '14px' }}>
-          <strong>📢 AdSense 광고 위치</strong>
+      <div 
+        className={`adsense-placeholder ${className}`} 
+        style={{
+          ...style, 
+          border: '2px dashed #28a745', 
+          borderRadius: '8px', 
+          padding: '15px', 
+          textAlign: 'center', 
+          backgroundColor: '#f8f9fa',
+          margin: '10px 0',
+          minHeight: '100px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <div style={{ color: '#28a745', fontSize: '14px', fontWeight: '500' }}>
+          🚀 <strong>Google Auto Ads 활성화됨</strong>
           <br />
-          <small>광고 슬롯: {slot}</small>
-          <br />
-          <small>형식: {format}</small>
-          <br />
-          <small style={{ color: '#28a745' }}>✓ 개발용 플레이스홀더 (실제 배포시 광고 표시)</small>
+          <small style={{ color: '#6c757d', marginTop: '5px', display: 'inline-block' }}>
+            실제 배포시 이 위치에 자동으로 광고가 표시됩니다
+          </small>
         </div>
       </div>
     );
   }
 
-  return (
-    <div className={`adsense-container ${className}`} style={style}>
-      <ins
-        ref={adRef}
-        className="adsbygoogle"
-        style={{ display: 'block' }}
-        data-ad-client="ca-pub-1493954029378412"
-        data-ad-slot={slot}
-        data-ad-format={format}
-        data-full-width-responsive={responsive ? "true" : "false"}
-      />
-    </div>
-  );
+  // 프로덕션 환경에서는 빈 div 반환 (Auto Ads가 자동으로 처리)
+  return <div className={`auto-ads-space ${className}`} style={style} />;
 };
 
 export default AdSense;

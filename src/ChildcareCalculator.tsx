@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col, Table } from 'react-bootstrap';
 import SocialShare from './components/SocialShare';
-import { InFeedAd, HeaderAd, SidebarAd } from './components/AdSenseUnits';
 
 interface ChildcareCost {
   category: string;
@@ -197,7 +196,6 @@ const ChildcareCalculator = () => {
       </div>
 
       {/* 헤더 광고 */}
-      <HeaderAd />
 
       <Row>
         <Col lg={8}>
@@ -281,7 +279,6 @@ const ChildcareCalculator = () => {
         </Col>
         
         <Col lg={4}>
-          <SidebarAd />
         </Col>
       </Row>
 
@@ -372,7 +369,6 @@ const ChildcareCalculator = () => {
       )}
 
       {/* 결과 후 광고 */}
-      {result && <InFeedAd />}
 
       <Row className="mt-4">
         <Col>

@@ -6,7 +6,6 @@ import HomeIcon from '../icons/HomeIcon';
 import BmiIcon from '../icons/BmiIcon';
 import SalaryIcon from '../icons/SalaryIcon';
 import SocialShare from '../components/SocialShare';
-import { HeaderAd, InFeedAd } from '../components/AdSenseUnits';
 
 const HomePage = () => {
   useEffect(() => {
@@ -107,8 +106,6 @@ const HomePage = () => {
           </p>
         </div>
 
-        {/* 헤더 광고 */}
-        <HeaderAd />
 
         <Row className="justify-content-center g-4">
           {calculators.map((calc, index) => (
