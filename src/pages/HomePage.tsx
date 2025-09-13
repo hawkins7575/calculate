@@ -5,6 +5,7 @@ import CalculatorIcon from '../icons/CalculatorIcon';
 import HomeIcon from '../icons/HomeIcon';
 import BmiIcon from '../icons/BmiIcon';
 import SalaryIcon from '../icons/SalaryIcon';
+import AdSense from '../components/AdSense';
 import SocialShare from '../components/SocialShare';
 
 const HomePage = () => {
@@ -106,6 +107,20 @@ const HomePage = () => {
           </p>
         </div>
 
+        {/* 헤더 광고 */}
+        <div className="text-center mb-4">
+          <AdSense 
+            adType="manual"
+            slot="7865432109"
+            format="auto"
+            responsive={true}
+            style={{ 
+              minHeight: '90px',
+              maxHeight: '120px'
+            }}
+            className="header-ad"
+          />
+        </div>
 
         <Row className="justify-content-center g-4">
           {calculators.map((calc, index) => (
@@ -198,6 +213,20 @@ const HomePage = () => {
             </Col>
           ))}
         </Row>
+
+        {/* 하단 광고 */}
+        <div className="my-4 text-center">
+          <AdSense
+            adType="manual"
+            slot="7865432109"
+            format="auto"
+            responsive={true}
+            style={{ 
+              minHeight: '200px'
+            }}
+            className="infeed-ad"
+          />
+        </div>
 
         <div className="text-center mt-5 pt-4">
           <div 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Row, Col } from 'react-bootstrap';
+import AdSense from './components/AdSense';
 import SocialShare from './components/SocialShare';
 
 interface CommissionResult {
@@ -188,6 +189,20 @@ const RealEstateCommissionCalculator = () => {
         </p>
       </div>
 
+      {/* 헤더 광고 */}
+      <div className="text-center mb-4">
+        <AdSense 
+          adType="manual"
+          slot="7865432109"
+          format="auto"
+          responsive={true}
+          style={{ 
+            minHeight: '90px',
+            maxHeight: '120px'
+          }}
+          className="header-ad"
+        />
+      </div>
 
       <Row>
         <Col lg={8}>
@@ -245,6 +260,21 @@ const RealEstateCommissionCalculator = () => {
           </Card>
         </Col>
         
+        <Col lg={4}>
+          <div className="sticky-top" style={{ top: '20px' }}>
+            <AdSense
+              adType="manual"
+              slot="7865432109"
+              format="auto"
+              responsive={true}
+              style={{ 
+                minHeight: '250px',
+                marginBottom: '20px'
+              }}
+              className="sidebar-ad"
+            />
+          </div>
+        </Col>
       </Row>
 
       {result && (
@@ -288,6 +318,21 @@ const RealEstateCommissionCalculator = () => {
         </Row>
       )}
 
+      {/* 결과 후 광고 */}
+      {result && (
+        <div className="my-4 text-center">
+          <AdSense
+            adType="manual"
+            slot="7865432109"
+            format="auto"
+            responsive={true}
+            style={{ 
+              minHeight: '200px'
+            }}
+            className="infeed-ad"
+          />
+        </div>
+      )}
 
       <Row className="mt-4">
         <Col>
