@@ -115,17 +115,15 @@ const SavingsCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">적금 예금 계산기</h2>
         <p className="text-muted">
           적금과 예금의 만기 수익을 계산하여 최적의 저축 계획을 세워보세요
         </p>
       </div>
 
-
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">💰 저축 정보 입력</h5>
@@ -231,8 +229,8 @@ const SavingsCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
                 <Card.Header>
                   <h5 className="mb-0">💸 계산 결과</h5>
@@ -301,8 +299,8 @@ const SavingsCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>💡 저축 상품 선택 가이드</strong></p>
@@ -407,8 +405,8 @@ const SavingsCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="적금 예금 계산기 - 저축 계획과 이자 수익 계산"
             description="적금과 예금의 만기 수익을 계산하고 최적의 저축 계획을 세워보세요"

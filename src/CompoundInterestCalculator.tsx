@@ -50,16 +50,15 @@ function CompoundInterestCalculator() {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h1 className="mb-3">복리계산기</h1>
         <p className="text-muted">
           무료 온라인 복리계산기로 투자 수익률과 복리 효과를 정확히 계산하여 장기 투자 계획을 세워보세요
         </p>
       </div>
 
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">📊 투자 정보 입력</h5>
@@ -121,8 +120,8 @@ function CompoundInterestCalculator() {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
               <Card.Header>
                 <h5 className="mb-0">💰 계산 결과</h5>
@@ -186,8 +185,8 @@ function CompoundInterestCalculator() {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h6 className="mb-0">💡 복리 투자 가이드</h6>
@@ -280,8 +279,8 @@ function CompoundInterestCalculator() {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="복리 계산기 - 투자의 마법을 체험하세요"
             description="원금과 수익률만 입력하면 미래 자산을 쉽게 계산할 수 있습니다"

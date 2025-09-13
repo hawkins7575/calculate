@@ -82,16 +82,15 @@ const SalaryCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">실급여 계산기</h2>
         <p className="text-muted">
           4대보험과 세금 공제 후 실제 수령액을 계산하고 절세 방법을 알아보세요
         </p>
       </div>
 
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">💰 급여 정보 입력</h5>
@@ -159,8 +158,8 @@ const SalaryCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
                 <Card.Header>
                   <h5 className="mb-0">💸 계산 결과</h5>
@@ -243,8 +242,8 @@ const SalaryCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>💡 절세 및 급여 관리 팁</strong></p>
@@ -363,8 +362,8 @@ const SalaryCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="실급여 계산기 - 4대보험과 세금 공제 후 실제 수령액 계산"
             description="연봉과 월급에 따른 실수령액을 정확하게 계산하고 절세 방법을 알아보세요"

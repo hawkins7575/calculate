@@ -188,16 +188,15 @@ const ChildcareCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">육아비용 계산기</h2>
         <p className="text-muted">
           자녀의 나이와 교육 환경에 따른 월별/연간 육아비용을 계산해보세요
         </p>
       </div>
 
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">📋 육아 정보 입력</h5>
@@ -279,8 +278,8 @@ const ChildcareCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
               <Card.Header>
                 <h5 className="mb-0">💰 현재 나이 기준 비용</h5>
@@ -365,8 +364,8 @@ const ChildcareCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>📚 육아비용 절약 팁</strong></p>
@@ -391,8 +390,8 @@ const ChildcareCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="육아비용 계산기 - 자녀양육비와 교육비 계산"
             description="자녀의 나이와 교육 환경에 따른 월별/연간 육아비용을 계산하고 절약 방법을 알아보세요"

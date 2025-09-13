@@ -75,16 +75,15 @@ const BmiCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">BMI 계산기</h2>
         <p className="text-muted">
           체질량지수를 계산하고 건강한 체중관리 방법을 확인하세요
         </p>
       </div>
 
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">⚖️ 신체 정보 입력</h5>
@@ -133,8 +132,8 @@ const BmiCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
                 <Card.Header>
                   <h5 className="mb-0">📊 계산 결과</h5>
@@ -219,8 +218,8 @@ const BmiCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>💪 건강한 체중관리 팁</strong></p>
@@ -317,8 +316,8 @@ const BmiCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="BMI 계산기 - 건강한 체중 관리의 시작"
             description="키와 몸무게만 입력하면 체질량지수(BMI)를 즉시 계산해드립니다"

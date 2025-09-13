@@ -102,17 +102,15 @@ const LoanCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">대출이자 계산기</h2>
         <p className="text-muted">
           대출 조건에 따른 월 상환액과 총 이자를 계산해보세요
         </p>
       </div>
 
-
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">📋 대출 조건 입력</h5>
@@ -188,8 +186,8 @@ const LoanCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <>
               <Card className="mb-3">
                 <Card.Header>
@@ -260,8 +258,8 @@ const LoanCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>📚 대출 상환 방식 안내</strong></p>
@@ -286,8 +284,8 @@ const LoanCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="대출이자 계산기 - 원리금균등과 원금균등 상환액 계산"
             description="대출 조건에 따른 월 상환액과 총 이자를 계산하고 상환 계획을 세워보세요"

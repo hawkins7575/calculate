@@ -52,17 +52,15 @@ const RetirementCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">퇴직금 계산기</h2>
         <p className="text-muted">
           근로기준법에 따른 퇴직금을 정확하게 계산해보세요
         </p>
       </div>
 
-
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">📋 근무 정보 입력</h5>
@@ -122,8 +120,8 @@ const RetirementCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
               <Card.Header>
                 <h5 className="mb-0">💰 계산 결과</h5>
@@ -166,8 +164,8 @@ const RetirementCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>📚 퇴직금 안내</strong></p>
@@ -244,8 +242,8 @@ const RetirementCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="퇴직금 계산기 - 근로기준법에 따른 정확한 퇴직금 계산"
             description="근속년수와 평균임금으로 퇴직금을 정확하게 계산하고 퇴직연금 정보를 확인하세요"

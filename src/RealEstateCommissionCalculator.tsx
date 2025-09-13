@@ -181,16 +181,15 @@ const RealEstateCommissionCalculator = () => {
 
   return (
     <div className="calculator-container">
-      <div className="text-center mb-4">
+      <div className="text-center mb-3">
         <h2 className="mb-3">부동산 중개보수 계산기</h2>
         <p className="text-muted">
           법정 상한요율 기준 중개보수를 계산하고 절약 방법을 알아보세요
         </p>
       </div>
 
-
-      <Row>
-        <Col>
+      <Row className="justify-content-center">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <h5 className="mb-0">🏠 거래 정보 입력</h5>
@@ -247,8 +246,8 @@ const RealEstateCommissionCalculator = () => {
       </Row>
 
       {result && (
-        <Row className="mt-4">
-          <Col>
+        <Row className="justify-content-center mt-3">
+          <Col xs={12} lg={8} xl={6}>
             <Card>
                 <Card.Header>
                   <h5 className="mb-0">💰 계산 결과</h5>
@@ -288,8 +287,8 @@ const RealEstateCommissionCalculator = () => {
       )}
 
 
-      <Row className="mt-4">
-        <Col>
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6}>
           <Card>
             <Card.Header>
               <p className="mb-0 small"><strong>💡 중개보수 절약 팁</strong></p>
@@ -364,8 +363,8 @@ const RealEstateCommissionCalculator = () => {
         </Col>
       </Row>
 
-      <Row className="mt-4">
-        <Col className="text-center">
+      <Row className="justify-content-center mt-3">
+        <Col xs={12} lg={8} xl={6} className="text-center">
           <SocialShare 
             title="부동산 중개보수 계산기 - 법정 상한요율 기준 중개수수료 계산"
             description="매매, 전세, 월세 중개보수를 정확하게 계산하고 절약 방법을 알아보세요"
