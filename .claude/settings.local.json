@@ -46,7 +46,8 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(taskkill:*)",
-      "Bash(del \"C:\\Users\\kim_d\\OneDrive\\바탕 화면\\app\\cal\\src\\components\\AdSenseUnits.tsx\")"
+      "Bash(del \"C:\\Users\\kim_d\\OneDrive\\바탕 화면\\app\\cal\\src\\components\\AdSenseUnits.tsx\")",
+      "Bash(powershell:*)"
     ],
     "deny": [],
     "ask": []

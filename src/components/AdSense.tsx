@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-// 혼용 방식: Auto Ads + 수동 광고 컴포넌트
-// Auto Ads는 HTML head에서 자동 작동
-// 수동 광고는 특정 위치에 직접 배치
+// 수동 광고 전용 컴포넌트
+// 기존 광고 영역에만 광고 표시
 
 interface AdSenseProps {
   slot?: string;
@@ -10,7 +9,6 @@ interface AdSenseProps {
   responsive?: boolean;
   style?: React.CSSProperties;
   className?: string;
-  adType?: 'manual' | 'auto'; // 광고 타입 지정
 }
 
 const AdSense: React.FC<AdSenseProps> = ({ 
@@ -18,14 +16,13 @@ const AdSense: React.FC<AdSenseProps> = ({
   format = 'auto',
   responsive = true,
   style = {},
-  className = '',
-  adType = 'manual' // 기본값을 수동 광고로 설정
+  className = ''
 }) => {
   const adRef = useRef<HTMLModElement>(null);
 
   useEffect(() => {
-    // Auto Ads 타입이거나 개발 환경에서는 초기화 건너뛰기
-    if (adType === 'auto' || process.env.NODE_ENV === 'development') {
+    // 개발 환경에서는 초기화 건너뛰기
+    if (process.env.NODE_ENV === 'development') {
       return;
     }
 
@@ -45,20 +42,19 @@ const AdSense: React.FC<AdSenseProps> = ({
     }, 100);
 
     return () => clearTimeout(timer);
-  }, [adType]);
+  }, []);
 
   // 개발 환경에서 플레이스홀더 표시
   const isDevelopment = process.env.NODE_ENV === 'development';
   const isLocalhost = typeof window !== 'undefined' && window.location.hostname === 'localhost';
 
   if (isDevelopment && isLocalhost) {
-    const isManual = adType === 'manual';
     return (
       <div 
         className={`adsense-placeholder ${className}`} 
         style={{
           ...style, 
-          border: `2px dashed ${isManual ? '#007bff' : '#28a745'}`, 
+          border: '2px dashed #007bff', 
           borderRadius: '8px', 
           padding: '15px', 
           textAlign: 'center', 
@@ -70,27 +66,17 @@ const AdSense: React.FC<AdSenseProps> = ({
           justifyContent: 'center'
         }}
       >
-        <div style={{ color: isManual ? '#007bff' : '#28a745', fontSize: '14px', fontWeight: '500' }}>
-          {isManual ? '📢' : '🚀'} <strong>{isManual ? '수동 광고 영역' : 'Auto Ads 영역'}</strong>
+        <div style={{ color: '#007bff', fontSize: '14px', fontWeight: '500' }}>
+          📢 <strong>수동 광고 영역</strong>
           <br />
-          {isManual && (
-            <>
-              <small style={{ color: '#6c757d' }}>슬롯: {slot}</small><br />
-              <small style={{ color: '#6c757d' }}>형식: {format}</small><br />
-            </>
-          )}
+          <small style={{ color: '#6c757d' }}>슬롯: {slot}</small><br />
+          <small style={{ color: '#6c757d' }}>형식: {format}</small><br />
           <small style={{ color: '#6c757d', marginTop: '5px', display: 'inline-block' }}>
             실제 배포시 이 위치에 광고가 표시됩니다
           </small>
         </div>
       </div>
     );
-  }
-
-  // 프로덕션 환경
-  if (adType === 'auto') {
-    // Auto Ads용 빈 공간
-    return <div className={`auto-ads-space ${className}`} style={style} />;
   }
 
   // 수동 광고

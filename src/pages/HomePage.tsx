@@ -110,7 +110,6 @@ const HomePage = () => {
         {/* 헤더 광고 */}
         <div className="text-center mb-4">
           <AdSense 
-            adType="manual"
             slot="7865432109"
             format="auto"
             responsive={true}
@@ -217,7 +216,6 @@ const HomePage = () => {
         {/* 하단 광고 */}
         <div className="my-4 text-center">
           <AdSense
-            adType="manual"
             slot="7865432109"
             format="auto"
             responsive={true}

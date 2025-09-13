@@ -192,7 +192,6 @@ const RealEstateCommissionCalculator = () => {
       {/* 헤더 광고 */}
       <div className="text-center mb-4">
         <AdSense 
-          adType="manual"
           slot="7865432109"
           format="auto"
           responsive={true}
@@ -263,7 +262,6 @@ const RealEstateCommissionCalculator = () => {
         <Col lg={4}>
           <div className="sticky-top" style={{ top: '20px' }}>
             <AdSense
-              adType="manual"
               slot="7865432109"
               format="auto"
               responsive={true}
@@ -322,7 +320,6 @@ const RealEstateCommissionCalculator = () => {
       {result && (
         <div className="my-4 text-center">
           <AdSense
-            adType="manual"
             slot="7865432109"
             format="auto"
             responsive={true}
