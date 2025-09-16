@@ -45,7 +45,7 @@ const AppNavbar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/compound-interest">
-              <CalculatorIcon className='nav-icon' /> 복리
+              <CalculatorIcon className='nav-icon' /> 복리계산기
             </Nav.Link>
             <Nav.Link as={Link} to="/real-estate">
               <HomeIcon className='nav-icon' /> 중개보수

@@ -51,7 +51,7 @@ const AboutUs: React.FC<PageProps> = ({ onBack }) => {
         <Card.Text>
           <strong>💰 금융 계산기</strong>
           <ul>
-            <li>복리 계산기 - 투자 수익률 및 복리 효과 계산</li>
+            <li>복리계산기 - 투자 수익률 및 복리 효과 계산</li>
             <li>은퇴자금 계산기 - 은퇴 후 필요 자금 계산</li>
             <li>대출 계산기 - 대출 이자 및 상환 계획</li>
             <li>적금 계산기 - 적금 만기 및 이자 계산</li>
